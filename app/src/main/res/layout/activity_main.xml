@@ -14,9 +14,9 @@
     <ImageView
         android:id="@+id/htpLogo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/goldenwords"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="293dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/goldenwords" />
 <!--    <ImageView-->
 <!--        android:id="@+id/start"-->
 <!--        android:layout_width="match_parent"-->
