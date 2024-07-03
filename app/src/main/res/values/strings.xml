@@ -12,6 +12,23 @@
     <string name="htp4">To complete the game, gather all the green ticks by spelling the correct word.</string>
     <string name="htp5">A wrong option will be denoted by a red cross. Good luck and have fun!</string>
     <string name="homePage">Home Page</string>
+    <string name="start">Start!</string>
+    <string name="eng1">English 1</string>
+    <string name="eng2">English 2</string>
+    <string name="eng3">English 3</string>
+    <string name="chinese1">Chinese 1</string>
+    <string name="chinese2">Chinese 2</string>
+    <string name="chinese3">Chinese 3</string>
+    <string name="Malay1">Malay 1</string>
+    <string name="Malay2">Malay 2</string>
+    <string name="Malay3">Malay 3</string>
+    <string name="Tamil1">Tamil 1</string>
+    <string name="Tamil2">Tamil 2</string>
+    <string name="Tamil2">Tamil 3</string>
+
+
+
+
 
 
 </resources>
