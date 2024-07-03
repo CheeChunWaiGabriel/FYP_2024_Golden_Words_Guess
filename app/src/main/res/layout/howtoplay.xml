@@ -58,7 +58,7 @@
                     android:layout_height="200dp"
                     android:layout_weight="0.4"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/trianglestar" />
+                    app:srcCompat="@drawable/trianglestar2" />
 
                 <TextView
                     android:id="@+id/htp2"
@@ -91,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    app:srcCompat="@drawable/example" />
+                    app:srcCompat="@drawable/" />
             </LinearLayout>
 
             <LinearLayout
@@ -102,8 +102,8 @@
 
                 <ImageView
                     android:id="@+id/htpCorrect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
                     app:srcCompat="@drawable/correct" />
 
                 <TextView
@@ -124,8 +124,8 @@
 
                 <ImageView
                     android:id="@+id/htpWrong"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     app:srcCompat="@drawable/wrong" />
 
                 <TextView
