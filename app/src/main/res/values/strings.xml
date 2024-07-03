@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Golden Words Guess</string>
+
+    <!-- Jin Yan-->
+    <string name="title">Choose Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Normal</string>
+    <string name="hard">Expert</string>
+    <string name="htp1">How to play</string>
+    <string name="htp2">Select a difficulty from the home page, 1* is the easiest, while 3* is the most advanced.</string>
+    <string name="htp3">Select one of the eight themes available to start your game.</string>
+    <string name="htp4">To complete the game, gather all the green ticks by completing the correct word.</string>
+    <string name="htp5">A wrong option will be denoted by a red cross and its sound effects. Good luck and have fun!</string>
+    <string name="homePage">Home Page</string>
+
+
 </resources>
