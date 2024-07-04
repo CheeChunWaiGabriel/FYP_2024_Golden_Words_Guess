@@ -1,37 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/red"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <GridLayout
-        android:id="@+id/letterGrid"
+    <!-- Top section with logo and star -->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:rowCount="2"
-        android:columnCount="4"
-        android:layout_marginBottom="20dp"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/red"
+        android:orientation="horizontal">
 
-        <!-- Placeholder buttons, replace with your letters -->
-        <Button android:id="@+id/buttonA" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A"/>
-        <Button android:id="@+id/buttonB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B"/>
-        <Button android:id="@+id/buttonC" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C"/>
-        <Button android:id="@+id/buttonD" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="D"/>
-        <Button android:id="@+id/buttonE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="E"/>
-        <Button android:id="@+id/buttonF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F"/>
-        <Button android:id="@+id/buttonG" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="G"/>
-        <Button android:id="@+id/buttonH" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H"/>
-    </GridLayout>
+        <ImageView
+            android:id="@+id/logoImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/submitButton"
+        <ImageView
+            android:id="@+id/levelStar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star" />
+    </LinearLayout>
+
+    <!-- Empty boxes section -->
+    <LinearLayout
+        android:id="@+id/ll_empty_boxes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"/>
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:background="@drawable/box_border"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:background="@drawable/box_border"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:background="@drawable/box_border"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:background="@drawable/box_border"/>
+    </LinearLayout>
+
+    <!-- Diamond shape with buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- Button at the top -->
+        <Button
+            android:id="@+id/btn_letter_top"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:text="T" />
+
+        <!-- Horizontal layout for the middle buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <!-- Button on the left -->
+            <Button
+                android:id="@+id/btn_letter_left"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="X"
+                android:layout_marginRight="60dp"/>
+
+            <!-- Button on the right -->
+            <Button
+                android:id="@+id/btn_letter_right"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="I"
+                android:layout_marginLeft="60dp"/>
+        </LinearLayout>
+
+        <!-- Button at the bottom -->
+        <Button
+            android:id="@+id/btn_letter_bottom"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="A" />
+    </LinearLayout>
+
+    <!-- Bottom buttons -->
+
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Home page" />
+
+
 </LinearLayout>
+
