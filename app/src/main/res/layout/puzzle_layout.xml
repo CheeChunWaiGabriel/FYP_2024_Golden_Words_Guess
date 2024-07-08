@@ -44,44 +44,42 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.02">
 
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="#FFFFFF"
             android:background="@drawable/box_border"/>
 
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="#FFFFFF"
             android:background="@drawable/box_border"/>
 
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="#FFFFFF"
             android:background="@drawable/box_border"/>
 
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="#FFFFFF"
             android:background="@drawable/box_border"/>
     </LinearLayout>
 
     <!-- Diamond shape with buttons -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:background="@drawable/diamond__1_star__puzzle_background">
 
         <!-- Button at the top -->
         <Button
@@ -89,31 +87,40 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
-            android:text="T" />
+            android:background="@drawable/transparent_button"
+            android:text="T"
+            android:textColor="@android:color/black"
+            android:textSize="60sp" />
 
         <!-- Horizontal layout for the middle buttons -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
 
             <!-- Button on the left -->
             <Button
                 android:id="@+id/btn_letter_left"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/transparent_button"
                 android:text="X"
-                android:layout_marginRight="60dp"/>
+                android:textColor="@android:color/black"
+                android:textSize="60sp" />
 
             <!-- Button on the right -->
             <Button
                 android:id="@+id/btn_letter_right"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/transparent_button"
                 android:text="I"
-                android:layout_marginLeft="60dp"/>
+                android:textColor="@android:color/black"
+                android:textSize="60sp" />
         </LinearLayout>
 
         <!-- Button at the bottom -->
@@ -123,7 +130,10 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:text="A" />
+            android:background="@drawable/transparent_button"
+            android:text="A"
+            android:textColor="@android:color/black"
+            android:textSize="60sp" />
     </LinearLayout>
 
     <!-- Bottom buttons -->
@@ -135,7 +145,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_gravity="center_horizontal"
-            android:text="Home page" />
+            android:text="Home page"
+            android:backgroundTint="#FFC000"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
 
 
 </LinearLayout>
