@@ -46,29 +46,41 @@
         android:layout_marginTop="20dp"
         android:layout_weight="0.05">
 
-        <View
+        <TextView
+            android:id="@+id/box1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="@drawable/box_border"/>
+            android:background="@drawable/box_border"
+            android:gravity="center"
+            android:textSize="30sp"/>
 
-        <View
+        <TextView
+            android:id="@+id/box2"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="@drawable/box_border"/>
+            android:background="@drawable/box_border"
+            android:gravity="center"
+            android:textSize="30sp"/>
 
-        <View
+        <TextView
+            android:id="@+id/box3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="@drawable/box_border"/>
+            android:background="@drawable/box_border"
+            android:gravity="center"
+            android:textSize="30sp"/>
 
-        <View
+        <TextView
+            android:id="@+id/box4"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5dp"
-            android:background="@drawable/box_border"/>
+            android:background="@drawable/box_border"
+            android:gravity="center"
+            android:textSize="30sp"/>
     </LinearLayout>
 
     <!-- Diamond shape with buttons -->
@@ -134,6 +146,28 @@
             android:textColor="@android:color/black"
             android:textSize="60sp"/>
     </LinearLayout>
+
+    <!-- Result indicator -->
+    <ImageView
+        android:id="@+id/result_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <!-- Try again button -->
+    <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:text="Try Again"
+        android:backgroundTint="#FFC000"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"/>
 
     <!-- Bottom buttons -->
     <Button

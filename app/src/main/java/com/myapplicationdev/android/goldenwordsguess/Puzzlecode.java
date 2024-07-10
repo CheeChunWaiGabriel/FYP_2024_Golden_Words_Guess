@@ -4,70 +4,84 @@ package com.myapplicationdev.android.goldenwordsguess;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class Puzzlecode extends AppCompatActivity {
 
-    private TextView tvWord;
-    private GridLayout glLetters;
-    private Button btnSubmit;
-    private Set<String> validWords;
-    private StringBuilder currentWord;
+    private TextView[] boxes;
+    private int currentBoxIndex = 0;
+    private final String correctWord = "TAXI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvWord = findViewById(R.id.tv_word);
-        glLetters = findViewById(R.id.gl_letters);
-        btnSubmit = findViewById(R.id.btn_submit);
-        validWords = new HashSet<>();
-        currentWord = new StringBuilder();
+        boxes = new TextView[]{
+                findViewById(R.id.box1),
+                findViewById(R.id.box2),
+                findViewById(R.id.box3),
+                findViewById(R.id.box4)
+        };
 
-        // Example valid words
-        validWords.add("CAB");
-        validWords.add("ABC");
+        Button btnTop = findViewById(R.id.btn_letter_top);
+        Button btnLeft = findViewById(R.id.btn_letter_left);
+        Button btnRight = findViewById(R.id.btn_letter_right);
+        Button btnBottom = findViewById(R.id.btn_letter_bottom);
+        Button btnTryAgain = findViewById(R.id.btn_try_again);
+        ImageView resultIndicator = findViewById(R.id.result_indicator);
 
-        setupLetterButtons();
-        setupSubmitButton();
-    }
-
-    private void setupLetterButtons() {
-        for (int i = 0; i < glLetters.getChildCount(); i++) {
-            View view = glLetters.getChildAt(i);
-            if (view instanceof Button) {
-                Button button = (Button) view;
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        currentWord.append(button.getText().toString());
-                        tvWord.setText(currentWord.toString());
-                    }
-                });
-            }
-        }
-    }
-
-    private void setupSubmitButton() {
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String word = currentWord.toString();
-                if (validWords.contains(word)) {
-                    Toast.makeText(Puzzlecode.this, "Correct!", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Puzzlecode.this, "Try Again!", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                if (currentBoxIndex < boxes.length) {
+                    Button button = (Button) view;
+                    boxes[currentBoxIndex].setText(button.getText());
+                    currentBoxIndex++;
+
+                    if (currentBoxIndex == boxes.length) {
+                        verifyWord(resultIndicator, btnTryAgain);
+                    }
                 }
-                currentWord.setLength(0);
-                tvWord.setText("");
+            }
+        };
+
+        btnTop.setOnClickListener(letterClickListener);
+        btnLeft.setOnClickListener(letterClickListener);
+        btnRight.setOnClickListener(letterClickListener);
+        btnBottom.setOnClickListener(letterClickListener);
+
+        btnTryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetGame(resultIndicator, btnTryAgain);
             }
         });
+    }
+
+    private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
+        StringBuilder formedWord = new StringBuilder();
+        for (TextView box : boxes) {
+            formedWord.append(box.getText().toString());
+        }
+
+        if (formedWord.toString().equals(correctWord)) {
+            resultIndicator.setImageResource(R.drawable.correct);
+        } else {
+            resultIndicator.setImageResource(R.drawable.wrong);
+            btnTryAgain.setVisibility(View.VISIBLE);
+        }
+        resultIndicator.setVisibility(View.VISIBLE);
+    }
+
+    private void resetGame(ImageView resultIndicator, Button btnTryAgain) {
+        for (TextView box : boxes) {
+            box.setText("");
+        }
+        currentBoxIndex = 0;
+        resultIndicator.setVisibility(View.GONE);
+        btnTryAgain.setVisibility(View.GONE);
     }
 }
