@@ -17,7 +17,16 @@
         android:layout_height="293dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/goldenwords" />
-
+    <Button
+        android:id="@+id/shotcutbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:backgroundTint="#FFC000"
+        android:text="Puzzle Shortcut"
+        android:textColor="@android:color/white"
+        android:textSize="35dp"/>
 
     <include layout="@layout/start_button" />
     <include layout="@layout/howtoplay_button" />
