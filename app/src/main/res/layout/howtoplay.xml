@@ -90,8 +90,7 @@
                     android:id="@+id/htpExample"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    app:srcCompat="@drawable/" />
+                    android:layout_weight="2" />
             </LinearLayout>
 
             <LinearLayout

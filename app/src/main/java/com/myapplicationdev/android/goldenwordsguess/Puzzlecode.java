@@ -1,6 +1,6 @@
-
 package com.myapplicationdev.android.goldenwordsguess;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +17,7 @@ public class Puzzlecode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.puzzle_layout);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
@@ -31,6 +31,7 @@ public class Puzzlecode extends AppCompatActivity {
         Button btnRight = findViewById(R.id.btn_letter_right);
         Button btnBottom = findViewById(R.id.btn_letter_bottom);
         Button btnTryAgain = findViewById(R.id.btn_try_again);
+        Button btnHome = findViewById(R.id.btn_home);
         ImageView resultIndicator = findViewById(R.id.result_indicator);
 
         View.OnClickListener letterClickListener = new View.OnClickListener() {
@@ -59,6 +60,14 @@ public class Puzzlecode extends AppCompatActivity {
                 resetGame(resultIndicator, btnTryAgain);
             }
         });
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Puzzlecode.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
@@ -85,3 +94,4 @@ public class Puzzlecode extends AppCompatActivity {
         btnTryAgain.setVisibility(View.GONE);
     }
 }
+
