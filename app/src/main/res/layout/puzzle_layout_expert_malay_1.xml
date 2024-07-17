@@ -129,7 +129,7 @@
         android:layout_height="350dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@drawable/hexagonGiant">
+        android:background="@drawable/hexagongiant">
 
         <!-- LinearLayout for the puzzle buttons -->
         <LinearLayout
