@@ -109,7 +109,7 @@
         android:layout_height="400dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@drawable/starGiant">
+        android:background="@drawable/stargiant">
 
         <!-- LinearLayout for the puzzle buttons -->
 
