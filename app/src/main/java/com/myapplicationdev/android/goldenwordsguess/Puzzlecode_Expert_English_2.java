@@ -14,11 +14,11 @@ public class Puzzlecode_Expert_English_2 extends AppCompatActivity {
     private TextView[] boxes;
     private int currentBoxIndex = 0;
     private final String correctWord = "WHEAT";
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_normal_english_3);
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.puzzle_layout_normal_english_3);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
