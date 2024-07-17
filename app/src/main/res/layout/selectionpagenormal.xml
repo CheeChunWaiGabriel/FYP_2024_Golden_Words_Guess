@@ -81,7 +81,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -90,7 +90,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -174,7 +174,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -183,7 +183,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -268,7 +268,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -277,7 +277,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
             <LinearLayout
@@ -361,7 +361,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -370,7 +370,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -455,7 +455,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -464,7 +464,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -535,6 +535,30 @@
                     android:textColor="@android:color/black"
                     android:textSize="25sp"
                     app:backgroundTint="@null" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle2" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle2" />
+
             </LinearLayout>
 
             <LinearLayout

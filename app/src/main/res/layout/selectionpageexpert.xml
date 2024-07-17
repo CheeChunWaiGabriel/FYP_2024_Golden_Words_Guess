@@ -93,7 +93,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -102,7 +102,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -188,7 +188,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -197,7 +197,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -284,7 +284,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -293,7 +293,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -378,7 +378,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -387,7 +387,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -472,7 +472,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -481,7 +481,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
@@ -566,7 +566,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -575,7 +575,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle" />
+                    android:src="@drawable/redcircle2" />
 
             </LinearLayout>
 
