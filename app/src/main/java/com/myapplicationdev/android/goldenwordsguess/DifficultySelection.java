@@ -36,7 +36,7 @@ public class DifficultySelection extends AppCompatActivity {
         mediumButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DifficultySelection.this, NormalActivity.class);
+                Intent intent = new Intent(DifficultySelection.this, EasyActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class DifficultySelection extends AppCompatActivity {
         hardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DifficultySelection.this, ExpertActivity.class);
+                Intent intent = new Intent(DifficultySelection.this, EasyActivity.class);
                 startActivity(intent);
             }
         });
