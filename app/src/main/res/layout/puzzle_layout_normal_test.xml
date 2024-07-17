@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <!-- Top section with logo and stars -->
+    <!-- Top section with logo and star -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -26,18 +26,7 @@
             app:srcCompat="@drawable/logo" />
 
         <ImageView
-            android:id="@+id/levelStar1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star"/>
-
-        <ImageView
-            android:id="@+id/levelStar2"
+            android:id="@+id/levelStar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -104,92 +93,90 @@
             android:textSize="30sp"/>
     </LinearLayout>
 
+    <!-- Star shape with buttons -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="423dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/starGiant">
 
-        <!-- LinearLayout for the puzzle buttons -->
-        <LinearLayout
+        <!-- RelativeLayout for the puzzle buttons -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
+            <!-- Button at the top -->
             <Button
                 android:id="@+id/btn_letter_top"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="35dp"
                 android:background="@drawable/transparent_button"
-                android:text="T"
+                android:text="A"
                 android:textColor="@android:color/black"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
+            <!-- Button at the top-right -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_letter_top_right"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="135dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/transparent_button"
+                android:text="P"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
 
-                <Button
-                    android:id="@+id/btn_letter_left"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="A"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
+            <!-- Button at the bottom-right -->
+            <Button
+                android:id="@+id/btn_letter_bottom_right"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/transparent_button"
+                android:text="P"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
 
-                <Button
-                    android:id="@+id/btn_letter_right"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="X"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
-            </LinearLayout>
+            <!-- Button at the bottom-left -->
+            <Button
+                android:id="@+id/btn_letter_bottom_left"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/transparent_button"
+                android:text="L"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+            <!-- Button at the top-left -->
+            <Button
+                android:id="@+id/btn_letter_top_left"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="135dp"
+                android:background="@drawable/transparent_button"
+                android:text="E"
+                android:textColor="@android:color/black"
+                android:textSize="50sp" />
+        </RelativeLayout>
 
-                <Button
-                    android:id="@+id/btn_letter_left"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="E"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
-
-                <Button
-                    android:id="@+id/btn_letter_right"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="70dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="S"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
-            </LinearLayout>
-        </LinearLayout>
 
         <!-- Result indicator -->
         <ImageView
@@ -197,8 +184,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:visibility="gone"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:visibility="gone" />
 
         <!-- Try again button -->
         <Button
@@ -206,11 +193,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:visibility="gone"
-            android:text="Try Again"
             android:backgroundTint="@color/red"
+            android:text="Try Again"
             android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:visibility="gone" />
     </FrameLayout>
 
     <!-- Bottom buttons -->
