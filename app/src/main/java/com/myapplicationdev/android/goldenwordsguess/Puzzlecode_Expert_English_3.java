@@ -19,15 +19,15 @@ public class Puzzlecode_Expert_English_3 extends AppCompatActivity {
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.puzzle_layout_normal_english_3);
-
-        boxes = new TextView[]{
-                findViewById(R.id.box1),
-                findViewById(R.id.box2),
-                findViewById(R.id.box3),
-                findViewById(R.id.box4),
-                findViewById(R.id.box5),
-                findViewById(R.id.box6)
-        };
+//
+//        boxes = new TextView[]{
+//                findViewById(R.id.box1),
+//                findViewById(R.id.box2),
+//                findViewById(R.id.box3),
+//                findViewById(R.id.box4),
+//                findViewById(R.id.box5),
+//                findViewById(R.id.box6)
+//        };
 
         Button btnTop = findViewById(R.id.btn_letter_top);
         Button btnLeft1 = findViewById(R.id.btn_letter_left1);
