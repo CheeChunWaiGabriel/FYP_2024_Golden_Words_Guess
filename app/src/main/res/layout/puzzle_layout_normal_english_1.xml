@@ -112,6 +112,8 @@
         android:background="@drawable/starGiant">
 
         <!-- LinearLayout for the puzzle buttons -->
+
+        <!-- Result indicator -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -191,7 +193,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Result indicator -->
         <ImageView
             android:id="@+id/result_indicator"
             android:layout_width="50dp"
