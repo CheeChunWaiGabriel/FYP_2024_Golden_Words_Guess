@@ -6,18 +6,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Puzzlecode extends AppCompatActivity {
+public class Puzzlecode_Easy_Tamil_1 extends AppCompatActivity {
 
     private TextView[] boxes;
     private int currentBoxIndex = 0;
-    private final String correctWord = "TAXI";
+    private final String correctWord = "சந்திரன்";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout);
+        setContentView(R.layout.puzzle_layout_easy_tamil_1);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
@@ -64,7 +65,7 @@ public class Puzzlecode extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Easy_Tamil_1.this, MainActivity.class);
                 startActivity(intent);
             }
         });

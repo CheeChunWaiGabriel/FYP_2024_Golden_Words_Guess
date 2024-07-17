@@ -106,7 +106,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/transparent_button"
-                android:text="T"
+                android:text="W"
                 android:textColor="@android:color/black"
                 android:textSize="60sp"/>
 
@@ -126,7 +126,7 @@
                     android:layout_height="100dp"
                     android:layout_marginRight="70dp"
                     android:background="@drawable/transparent_button"
-                    android:text="X"
+                    android:text="O"
                     android:textColor="@android:color/black"
                     android:textSize="60sp"/>
 
@@ -137,7 +137,7 @@
                     android:layout_height="100dp"
                     android:layout_marginLeft="70dp"
                     android:background="@drawable/transparent_button"
-                    android:text="I"
+                    android:text="L"
                     android:textColor="@android:color/black"
                     android:textSize="60sp"/>
             </LinearLayout>
@@ -150,7 +150,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/transparent_button"
-                android:text="A"
+                android:text="F"
                 android:textColor="@android:color/black"
                 android:textSize="60sp"/>
         </LinearLayout>

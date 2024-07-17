@@ -8,28 +8,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Puzzlecode extends AppCompatActivity {
+public class Puzzlecode_Normal_English_3 extends AppCompatActivity {
 
     private TextView[] boxes;
     private int currentBoxIndex = 0;
-    private final String correctWord = "TAXI";
+    private final String correctWord = "WHEAT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout);
+        setContentView(R.layout.puzzle_layout_normal_english_3);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
                 findViewById(R.id.box2),
                 findViewById(R.id.box3),
-                findViewById(R.id.box4)
+                findViewById(R.id.box4),
+                findViewById(R.id.box5)
         };
 
         Button btnTop = findViewById(R.id.btn_letter_top);
-        Button btnLeft = findViewById(R.id.btn_letter_left);
-        Button btnRight = findViewById(R.id.btn_letter_right);
-        Button btnBottom = findViewById(R.id.btn_letter_bottom);
+        Button btnLeft1 = findViewById(R.id.btn_letter_left1);
+        Button btnRight1 = findViewById(R.id.btn_letter_right1);
+        Button btnLeft2 = findViewById(R.id.btn_letter_left2);
+        Button btnRight2 = findViewById(R.id.btn_letter_right2);
         Button btnTryAgain = findViewById(R.id.btn_try_again);
         Button btnHome = findViewById(R.id.btn_home);
         ImageView resultIndicator = findViewById(R.id.result_indicator);
@@ -50,9 +52,10 @@ public class Puzzlecode extends AppCompatActivity {
         };
 
         btnTop.setOnClickListener(letterClickListener);
-        btnLeft.setOnClickListener(letterClickListener);
-        btnRight.setOnClickListener(letterClickListener);
-        btnBottom.setOnClickListener(letterClickListener);
+        btnLeft1.setOnClickListener(letterClickListener);
+        btnRight1.setOnClickListener(letterClickListener);
+        btnLeft2.setOnClickListener(letterClickListener);
+        btnRight2.setOnClickListener(letterClickListener);
 
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +67,7 @@ public class Puzzlecode extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Normal_English_3.this, MainActivity.class);
                 startActivity(intent);
             }
         });

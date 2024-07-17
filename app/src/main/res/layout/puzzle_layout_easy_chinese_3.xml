@@ -100,17 +100,19 @@
             android:gravity="center">
 
             <!-- Button at the top -->
+
+            <!-- Horizontal layout for the middle buttons -->
+
             <Button
                 android:id="@+id/btn_letter_top"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/transparent_button"
-                android:text="T"
+                android:text="龙"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"/>
+                android:textSize="50sp" />
 
-            <!-- Horizontal layout for the middle buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -126,9 +128,9 @@
                     android:layout_height="100dp"
                     android:layout_marginRight="70dp"
                     android:background="@drawable/transparent_button"
-                    android:text="X"
+                    android:text="马"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"/>
+                    android:textSize="50sp"/>
 
                 <!-- Button on the right -->
                 <Button
@@ -137,9 +139,9 @@
                     android:layout_height="100dp"
                     android:layout_marginLeft="70dp"
                     android:background="@drawable/transparent_button"
-                    android:text="I"
+                    android:text="精"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"/>
+                    android:textSize="50sp"/>
             </LinearLayout>
 
             <!-- Button at the bottom -->
@@ -150,9 +152,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/transparent_button"
-                android:text="A"
+                android:text="神"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"/>
+                android:textSize="50sp"/>
         </LinearLayout>
 
         <!-- Result indicator -->

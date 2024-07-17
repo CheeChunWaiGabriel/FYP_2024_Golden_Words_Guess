@@ -33,6 +33,17 @@
             android:layout_weight="1"
             android:paddingBottom="20dp"
             app:srcCompat="@drawable/star" />
+
+        <ImageView
+            android:id="@+id/levelStar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star" />
     </LinearLayout>
 
     <TextView
@@ -65,7 +76,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel1Easy"
+                    android:id="@+id/tvLevel1Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -78,7 +89,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel2Easy"
+                    android:id="@+id/tvLevel2Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -97,7 +108,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel1Easy"
+                    android:id="@+id/btnLevel1Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -112,7 +123,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel2Easy"
+                    android:id="@+id/btnLevel2Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -134,7 +145,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel3Easy"
+                    android:id="@+id/tvLevel3Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -147,7 +158,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel4Easy"
+                    android:id="@+id/tvLevel4Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -166,7 +177,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel3Easy"
+                    android:id="@+id/btnLevel3Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -181,7 +192,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel4Easy"
+                    android:id="@+id/btnLevel4Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -203,7 +214,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel5Easy"
+                    android:id="@+id/tvLevel5Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -216,7 +227,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel6Easy"
+                    android:id="@+id/tvLevel6Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -235,7 +246,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel5Easy"
+                    android:id="@+id/btnLevel5Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -250,7 +261,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel6Easy"
+                    android:id="@+id/btnLevel6Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -272,7 +283,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel7Easy"
+                    android:id="@+id/tvLevel7Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -285,7 +296,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel8Easy"
+                    android:id="@+id/tvLevel8Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -304,7 +315,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel7Easy"
+                    android:id="@+id/btnLevel7Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -319,7 +330,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel8Easy"
+                    android:id="@+id/btnLevel8Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -341,7 +352,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel9Easy"
+                    android:id="@+id/tvLevel9Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -354,7 +365,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel10Easy"
+                    android:id="@+id/tvLevel10Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -373,7 +384,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel9Easy"
+                    android:id="@+id/btnLevel9Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -388,7 +399,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel10Easy"
+                    android:id="@+id/btnLevel10Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -410,7 +421,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvLevel11Easy"
+                    android:id="@+id/tvLevel11Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -423,7 +434,7 @@
                     android:maxLines="1"/>
 
                 <TextView
-                    android:id="@+id/tvLevel12Easy"
+                    android:id="@+id/tvLevel12Normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -442,7 +453,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLevel11Easy"
+                    android:id="@+id/btnLevel11Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
@@ -457,7 +468,7 @@
                     app:backgroundTint="@null" />
 
                 <Button
-                    android:id="@+id/btnLevel12Easy"
+                    android:id="@+id/btnLevel12Normal"
                     android:layout_width="0dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"

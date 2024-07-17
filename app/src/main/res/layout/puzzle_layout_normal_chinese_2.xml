@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <!-- Top section with logo and star -->
+    <!-- Top section with logo and stars -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -26,7 +26,18 @@
             app:srcCompat="@drawable/logo" />
 
         <ImageView
-            android:id="@+id/levelStar"
+            android:id="@+id/levelStar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star"/>
+
+        <ImageView
+            android:id="@+id/levelStar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -82,15 +93,23 @@
             android:background="@drawable/box_border"
             android:gravity="center"
             android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/box5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/box_border"
+            android:gravity="center"
+            android:textSize="30sp"/>
     </LinearLayout>
 
-    <!-- Diamond shape with buttons -->
     <FrameLayout
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@drawable/diamond__1_star__puzzle_background">
+        android:background="@drawable/starGiant">
 
         <!-- LinearLayout for the puzzle buttons -->
         <LinearLayout
@@ -99,18 +118,17 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <!-- Button at the top -->
             <Button
                 android:id="@+id/btn_letter_top"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/transparent_button"
-                android:text="T"
+                android:text="后"
                 android:textColor="@android:color/black"
                 android:textSize="60sp"/>
 
-            <!-- Horizontal layout for the middle buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,40 +137,58 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
-                <!-- Button on the left -->
                 <Button
-                    android:id="@+id/btn_letter_left"
+                    android:id="@+id/btn_letter_left1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginRight="70dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="50dp"
                     android:background="@drawable/transparent_button"
-                    android:text="X"
+                    android:text="思"
                     android:textColor="@android:color/black"
                     android:textSize="60sp"/>
 
-                <!-- Button on the right -->
                 <Button
-                    android:id="@+id/btn_letter_right"
+                    android:id="@+id/btn_letter_right1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="70dp"
+                    android:layout_marginBottom="50dp"
                     android:background="@drawable/transparent_button"
-                    android:text="I"
+                    android:text="行"
                     android:textColor="@android:color/black"
                     android:textSize="60sp"/>
             </LinearLayout>
 
-            <!-- Button at the bottom -->
-            <Button
-                android:id="@+id/btn_letter_bottom"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/transparent_button"
-                android:text="A"
-                android:textColor="@android:color/black"
-                android:textSize="60sp"/>
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_letter_left2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/transparent_button"
+                    android:text="而"
+                    android:textColor="@android:color/black"
+                    android:textSize="60sp"/>
+
+                <Button
+                    android:id="@+id/btn_letter_right2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="70dp"
+                    android:background="@drawable/transparent_button"
+                    android:text="三"
+                    android:textColor="@android:color/black"
+                    android:textSize="60sp"/>
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Result indicator -->
