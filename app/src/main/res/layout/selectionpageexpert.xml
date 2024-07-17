@@ -86,6 +86,31 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvLevel1Expert"
                     android:layout_width="0dp"
@@ -94,23 +119,23 @@
                     android:layout_marginLeft="50dp"
                     android:layout_marginRight="70dp"
                     android:layout_weight="1"
+                    android:maxLines="1"
                     android:text="@string/eng1"
                     android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:maxLines="1"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvLevel2Expert"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
                     android:text="@string/eng2"
                     android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:maxLines="1"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -150,10 +175,38 @@
                     app:backgroundTint="@null" />
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
+
 
                 <TextView
                     android:id="@+id/tvLevel3Expert"
@@ -217,6 +270,31 @@
                     android:textColor="@android:color/black"
                     android:textSize="25sp"
                     app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -293,6 +371,31 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvLevel7Expert"
                     android:layout_width="0dp"
@@ -355,6 +458,31 @@
                     android:textColor="@android:color/black"
                     android:textSize="25sp"
                     app:backgroundTint="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -427,6 +555,32 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+                <ImageView
+                    android:id="@+id/imageViewRose"
+                    android:layout_width="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redcircle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
