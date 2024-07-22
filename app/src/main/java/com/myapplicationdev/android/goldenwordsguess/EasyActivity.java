@@ -19,9 +19,6 @@ public class EasyActivity extends AppCompatActivity {
     Button btnPuzzle7;
     Button btnPuzzle8;
     Button btnPuzzle9;
-    Button btnPuzzle10;
-    Button btnPuzzle11;
-    Button btnPuzzle12;
 
 
     @Override
@@ -40,9 +37,6 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle7 = findViewById(R.id.btnLevel7Easy);
         btnPuzzle8 = findViewById(R.id.btnLevel8Easy);
         btnPuzzle9 = findViewById(R.id.btnLevel9Easy);
-        btnPuzzle10 = findViewById(R.id.btnLevel10Easy);
-        btnPuzzle11 = findViewById(R.id.btnLevel11Easy);
-        btnPuzzle12 = findViewById(R.id.btnLevel12Easy);
 
 
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -120,27 +114,6 @@ public class EasyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Malay_3.class);
-                startActivity(intent);
-            }
-        });
-        btnPuzzle10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Tamil_1.class);
-                startActivity(intent);
-            }
-        });
-        btnPuzzle11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Tamil_2.class);
-                startActivity(intent);
-            }
-        });
-        btnPuzzle12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Tamil_3.class);
                 startActivity(intent);
             }
         });

@@ -17,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button Testbutton;
         // Initialize buttons
         View startButton = findViewById(R.id.startBtn);
-        View mediumButton = findViewById(R.id.htpBtn);
-
+        View howtoplayButton = findViewById(R.id.htpBtn);
+        Testbutton = findViewById(R.id.btnTest);
         // Set click listeners for buttons
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,10 +31,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mediumButton.setOnClickListener(new View.OnClickListener() {
+        howtoplayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HowToPlay.class);
+                startActivity(intent);
+            }
+        });
+        Testbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Puzzlecode.class);
                 startActivity(intent);
             }
         });
