@@ -81,7 +81,7 @@ public class Puzzlecode extends AppCompatActivity {
                     TextView lastBox = boxes[currentBoxIndex];
                     String lastLetter = lastBox.getText().toString();
                     lastBox.setText("");
-                    lastBox.setBackgroundColor(ContextCompat.getColor(Puzzlecode.this, R.color.white));
+                    lastBox.setBackgroundResource(R.drawable.box_border); // Reset to original drawable
                     for (Button letterButton : letterButtons) {
                         if (letterButton.getText().toString().equals(lastLetter)) {
                             letterButton.setEnabled(true);
@@ -95,6 +95,7 @@ public class Puzzlecode extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void verifyLetter(String letter, int index, ImageView resultIndicator, Button btnTryAgain, Button btnUndo) {
