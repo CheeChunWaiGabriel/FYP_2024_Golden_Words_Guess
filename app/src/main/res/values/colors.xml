@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFC000</color>
+    <color name="red">#C00000</color>
     <color name="box_filled_color">#E0E0E0</color>
-    <color name="wrong_letter_color">#FFCDD2</color>
+    <color name="wrong_letter_color">#F44336</color>
+    <color name="correct_letter_color">#4CAF50</color>
     <color name="grey">#BDBDBD</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="red">#F44336</color>
 </resources>

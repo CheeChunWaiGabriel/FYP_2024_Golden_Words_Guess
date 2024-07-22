@@ -46,14 +46,10 @@ public class Puzzlecode extends AppCompatActivity {
                 if (currentBoxIndex < boxes.length) {
                     Button button = (Button) view;
                     boxes[currentBoxIndex].setText(button.getText());
-                    boxes[currentBoxIndex].setBackgroundColor(ContextCompat.getColor(Puzzlecode.this, R.color.box_filled_color));
                     button.setTextColor(ContextCompat.getColor(Puzzlecode.this, R.color.grey));
                     button.setEnabled(false);
+                    verifyLetter(button.getText().toString(), currentBoxIndex, resultIndicator, btnTryAgain, btnUndo);
                     currentBoxIndex++;
-
-                    if (currentBoxIndex == boxes.length) {
-                        verifyWord(resultIndicator, btnTryAgain);
-                    }
                 }
             }
         };
@@ -65,7 +61,7 @@ public class Puzzlecode extends AppCompatActivity {
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resetGame(resultIndicator, btnTryAgain);
+                resetGame(resultIndicator, btnTryAgain, btnUndo);
             }
         });
 
@@ -93,32 +89,31 @@ public class Puzzlecode extends AppCompatActivity {
                             break;
                         }
                     }
+                    resultIndicator.setVisibility(View.GONE);
+                    btnTryAgain.setVisibility(View.GONE);
+                    btnUndo.setVisibility(View.GONE);
                 }
             }
         });
     }
 
-    private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
-        StringBuilder formedWord = new StringBuilder();
-        for (TextView box : boxes) {
-            formedWord.append(box.getText().toString());
-        }
-
-        if (formedWord.toString().equals(correctWord)) {
-            resultIndicator.setImageResource(R.drawable.correct);
-        } else {
-            resultIndicator.setImageResource(R.drawable.wrong);
-            btnTryAgain.setVisibility(View.VISIBLE);
-            for (int i = 0; i < boxes.length; i++) {
-                if (boxes[i].getText().toString().charAt(0) != correctWord.charAt(i)) {
-                    boxes[i].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
-                }
+    private void verifyLetter(String letter, int index, ImageView resultIndicator, Button btnTryAgain, Button btnUndo) {
+        if (correctWord.charAt(index) == letter.charAt(0)) {
+            boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
+            if (index == boxes.length - 1) {
+                resultIndicator.setImageResource(R.drawable.correct);
+                resultIndicator.setVisibility(View.VISIBLE);
             }
+        } else {
+            boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
+            resultIndicator.setImageResource(R.drawable.wrong);
+            resultIndicator.setVisibility(View.VISIBLE);
+            btnTryAgain.setVisibility(View.VISIBLE);
+            btnUndo.setVisibility(View.VISIBLE);
         }
-        resultIndicator.setVisibility(View.VISIBLE);
     }
 
-    private void resetGame(ImageView resultIndicator, Button btnTryAgain) {
+    private void resetGame(ImageView resultIndicator, Button btnTryAgain, Button btnUndo) {
         for (TextView box : boxes) {
             box.setText("");
             box.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
@@ -126,6 +121,7 @@ public class Puzzlecode extends AppCompatActivity {
         currentBoxIndex = 0;
         resultIndicator.setVisibility(View.GONE);
         btnTryAgain.setVisibility(View.GONE);
+        btnUndo.setVisibility(View.GONE);
 
         for (Button letterButton : letterButtons) {
             letterButton.setEnabled(true);
