@@ -24,12 +24,16 @@
         <activity android:name=".Puzzlecode"></activity>
         <activity android:name=".DifficultySelection"></activity>
         <activity android:name=".HowToPlay"></activity>
-        <activity android:name=".Puzzlecode_Easy_Chinese_2"></activity>
-        <activity android:name=".Puzzlecode_Easy_Chinese_1"></activity>
-        <activity android:name=".Puzzlecode_Easy_Chinese_3"></activity>
+        <activity android:name=".Puzzlecode_Easy_English_1"/>
+        <activity android:name=".Puzzlecode_Easy_English_2"/>
+        <activity android:name=".Puzzlecode_Easy_English_3"/>
+        <activity android:name=".Puzzlecode_Easy_Chinese_1"/>
+        <activity android:name=".Puzzlecode_Easy_Chinese_2"/>
+        <activity android:name=".Puzzlecode_Easy_Chinese_3"/>
+        <activity android:name=".Puzzlecode_Easy_Malay_1"/>
+        <activity android:name=".Puzzlecode_Easy_Malay_2"/>
+        <activity android:name=".Puzzlecode_Easy_Malay_3"/>
         <activity android:name=".EasyActivity"></activity>
-        <activity android:name=".Puzzlecode_Easy_English_3"></activity>
-        <activity android:name=".Puzzlecode_Easy_English_2"></activity>
         </application>
 
 </manifest>
