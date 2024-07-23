@@ -20,7 +20,7 @@ public class DifficultySelection extends AppCompatActivity {
 
         // Initialize buttons
         View easyButton = findViewById(R.id.easyBtn);
-        View mediumButton = findViewById(R.id.normalBtn);
+        View normalButton = findViewById(R.id.normalBtn);
         View hardButton = findViewById(R.id.expertBtn);
 
         // Set click listeners for buttons
@@ -32,10 +32,10 @@ public class DifficultySelection extends AppCompatActivity {
             }
         });
 
-        mediumButton.setOnClickListener(new View.OnClickListener() {
+        normalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DifficultySelection.this, EasyActivity.class);
+                Intent intent = new Intent(DifficultySelection.this, NormalActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class DifficultySelection extends AppCompatActivity {
         hardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DifficultySelection.this, EasyActivity.class);
+                Intent intent = new Intent(DifficultySelection.this, ExpertActivity.class);
                 startActivity(intent);
             }
         });

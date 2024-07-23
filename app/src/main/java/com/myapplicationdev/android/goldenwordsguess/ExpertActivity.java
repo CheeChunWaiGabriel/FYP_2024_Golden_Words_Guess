@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class EasyActivity extends AppCompatActivity {
+public class ExpertActivity extends AppCompatActivity {
     Button btnHome;
     Button btnPuzzle1;
     Button btnPuzzle2;
@@ -25,24 +25,24 @@ public class EasyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.selectionpageeasy);
+        setContentView(R.layout.selectionpageexpert);
 
-        btnHome = findViewById(R.id.htpHomeButtonEasy);
-        btnPuzzle1 = findViewById(R.id.btnLevel1Easy);
-        btnPuzzle2 = findViewById(R.id.btnLevel2Easy);
-        btnPuzzle3 = findViewById(R.id.btnLevel3Easy);
-        btnPuzzle4 = findViewById(R.id.btnLevel4Easy);
-        btnPuzzle5 = findViewById(R.id.btnLevel5Easy);
-        btnPuzzle6 = findViewById(R.id.btnLevel6Easy);
-        btnPuzzle7 = findViewById(R.id.btnLevel7Easy);
-        btnPuzzle8 = findViewById(R.id.btnLevel8Easy);
-        btnPuzzle9 = findViewById(R.id.btnLevel9Easy);
+        btnHome = findViewById(R.id.htpHomeButtonExpert);
+        btnPuzzle1 = findViewById(R.id.btnLevel1Expert);
+        btnPuzzle2 = findViewById(R.id.btnLevel2Expert);
+        btnPuzzle3 = findViewById(R.id.btnLevel3Expert);
+        btnPuzzle4 = findViewById(R.id.btnLevel4Expert);
+        btnPuzzle5 = findViewById(R.id.btnLevel5Expert);
+        btnPuzzle6 = findViewById(R.id.btnLevel6Expert);
+        btnPuzzle7 = findViewById(R.id.btnLevel7Expert);
+        btnPuzzle8 = findViewById(R.id.btnLevel8Expert);
+        btnPuzzle9 = findViewById(R.id.btnLevel9Expert);
 
 
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, MainActivity.class);
+                Intent intent = new Intent(ExpertActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_1.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_English_1.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_2.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_English_2.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +66,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_3.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_English_3.class);
                 startActivity(intent);
             }
         });
@@ -74,7 +74,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_1.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_1.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_2.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_2.class);
                 startActivity(intent);
             }
         });
@@ -90,7 +90,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_3.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_3.class);
                 startActivity(intent);
             }
         });
@@ -98,7 +98,7 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this,Puzzlecode_Easy_Malay_1.class);
+                Intent intent = new Intent(ExpertActivity.this,Puzzlecode_Expert_Malay_1.class);
                 startActivity(intent);
             }
         });
@@ -106,14 +106,14 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Malay_2.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_Malay_2.class);
                 startActivity(intent);
             }
         });
         btnPuzzle9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Malay_3.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_Malay_3.class);
                 startActivity(intent);
             }
         });
