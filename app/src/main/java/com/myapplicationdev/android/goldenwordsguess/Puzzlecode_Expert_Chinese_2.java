@@ -9,26 +9,28 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
+public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
 
     private TextView[] boxes;
     private int currentBoxIndex = 0;
-    private final String correctWord = "KUBOR";
+    private final String correctWord = "求人不如求己";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_normal_malay_3);
+        setContentView(R.layout.puzzle_layout_expert_english_1);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
                 findViewById(R.id.box2),
                 findViewById(R.id.box3),
                 findViewById(R.id.box4),
-                findViewById(R.id.box5)
+                findViewById(R.id.box5),
+                findViewById(R.id.box6)
         };
 
-        Button btnTop = findViewById(R.id.btn_letter_top);
+        Button btnTop = findViewById(R.id.btn_letter_top1);
+        Button btnTop2 = findViewById(R.id.btn_letter_top2);
         Button btnLeft1 = findViewById(R.id.btn_letter_left1);
         Button btnRight1 = findViewById(R.id.btn_letter_right1);
         Button btnLeft2 = findViewById(R.id.btn_letter_left2);
@@ -53,6 +55,7 @@ public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
         };
 
         btnTop.setOnClickListener(letterClickListener);
+        btnTop2.setOnClickListener(letterClickListener);
         btnLeft1.setOnClickListener(letterClickListener);
         btnRight1.setOnClickListener(letterClickListener);
         btnLeft2.setOnClickListener(letterClickListener);
@@ -68,7 +71,7 @@ public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode_Normal_Malay_3.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Expert_Chinese_2.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -96,6 +99,7 @@ public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
         currentBoxIndex = 0;
         resultIndicator.setVisibility(View.GONE);
         btnTryAgain.setVisibility(View.GONE);
-    }
+
+       }
 }
 

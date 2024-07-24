@@ -18,7 +18,7 @@ public class Puzzlecode_Normal_Malay_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_normal_english_1);
+        setContentView(R.layout.puzzle_layout_normal_malay_1);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
