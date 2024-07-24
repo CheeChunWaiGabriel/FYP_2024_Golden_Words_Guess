@@ -28,10 +28,10 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="@string/title"
         android:textSize="40sp"
-        android:layout_marginLeft="50dp"
         android:textStyle="bold" />
     <!-- Button with one drawable -->
     <include layout="@layout/easy_button" />
