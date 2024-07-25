@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
 
@@ -32,9 +33,11 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
         Button btnRight1 = findViewById(R.id.btn_letter_right1);
         Button btnLeft2 = findViewById(R.id.btn_letter_left2);
         Button btnRight2 = findViewById(R.id.btn_letter_right2);
+        ImageView resultIndicator = findViewById(R.id.result_indicator);
         Button btnTryAgain = findViewById(R.id.btn_try_again);
         Button btnHome = findViewById(R.id.btn_home);
-        ImageView resultIndicator = findViewById(R.id.result_indicator);
+        Button btnUndo = findViewById(R.id.btn_undo);
+
 
         View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
@@ -71,20 +74,44 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnUndo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //undoLastMove();
+            }
+        });
     }
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
+
         StringBuilder formedWord = new StringBuilder();
         for (TextView box : boxes) {
             formedWord.append(box.getText().toString());
         }
 
-        if (formedWord.toString().equals(correctWord)) {
+        boolean allLettersCorrect = true;
+        Button btnUndo = findViewById(R.id.btn_undo);
+        for (int i = 0; i < formedWord.length(); i++) {
+            char enteredLetter = formedWord.charAt(i);
+            char correctLetter = correctWord.charAt(i);
+
+            if (enteredLetter == correctLetter) {
+                boxes[i].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
+            } else {
+                boxes[i].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
+                allLettersCorrect = false;
+            }
+        }
+
+        if (allLettersCorrect && formedWord.toString().equals(correctWord)) {
             resultIndicator.setImageResource(R.drawable.correct);
         } else {
             resultIndicator.setImageResource(R.drawable.wrong);
             btnTryAgain.setVisibility(View.VISIBLE);
+            btnUndo.setVisibility(View.VISIBLE);
         }
+
         resultIndicator.setVisibility(View.VISIBLE);
     }
 
