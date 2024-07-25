@@ -26,6 +26,7 @@
         android:text="Test"
         android:textColor="@android:color/black"
         android:textSize="50sp"
+        android:visibility="gone"
         app:backgroundTint="@null" />
 
     <include layout="@layout/start_button" />
