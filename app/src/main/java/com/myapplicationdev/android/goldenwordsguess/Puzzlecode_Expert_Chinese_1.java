@@ -12,13 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Puzzlecode_Expert_Chinese_1 extends AppCompatActivity {
 
     private TextView[] boxes;
+    private Button[] letterButtons;
     private int currentBoxIndex = 0;
     private final String correctWord = "有志者事竟成";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_expert_english_1);
+        setContentView(R.layout.puzzle_layout_expert_chinese_1);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
@@ -76,6 +77,8 @@ public class Puzzlecode_Expert_Chinese_1 extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
         StringBuilder formedWord = new StringBuilder();

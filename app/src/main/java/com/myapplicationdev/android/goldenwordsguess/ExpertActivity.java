@@ -74,7 +74,7 @@ public class ExpertActivity extends AppCompatActivity {
         btnPuzzle4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_1.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_Chinese_1.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class ExpertActivity extends AppCompatActivity {
         btnPuzzle5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_2.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_Chinese_2.class);
                 startActivity(intent);
             }
         });
@@ -90,7 +90,7 @@ public class ExpertActivity extends AppCompatActivity {
         btnPuzzle6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Normal_Chinese_3.class);
+                Intent intent = new Intent(ExpertActivity.this, Puzzlecode_Expert_Chinese_3.class);
                 startActivity(intent);
             }
         });

@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_expert_english_1);
+        setContentView(R.layout.puzzle_layout_expert_chinese_2);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
@@ -78,20 +79,34 @@ public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
     }
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
+
         StringBuilder formedWord = new StringBuilder();
         for (TextView box : boxes) {
             formedWord.append(box.getText().toString());
         }
 
-        if (formedWord.toString().equals(correctWord)) {
+        boolean allLettersCorrect = true;
+        for (int i = 0; i < formedWord.length(); i++) {
+            char enteredLetter = formedWord.charAt(i);
+            char correctLetter = correctWord.charAt(i);
+
+            if (enteredLetter == correctLetter) {
+                boxes[i].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
+            } else {
+                boxes[i].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
+                allLettersCorrect = false;
+            }
+        }
+
+        if (allLettersCorrect && formedWord.toString().equals(correctWord)) {
             resultIndicator.setImageResource(R.drawable.correct);
         } else {
             resultIndicator.setImageResource(R.drawable.wrong);
             btnTryAgain.setVisibility(View.VISIBLE);
         }
+
         resultIndicator.setVisibility(View.VISIBLE);
     }
-
     private void resetGame(ImageView resultIndicator, Button btnTryAgain) {
         for (TextView box : boxes) {
             box.setText("");
