@@ -24,6 +24,9 @@
         <activity android:name=".Puzzlecode"></activity>
         <activity android:name=".DifficultySelection"></activity>
         <activity android:name=".HowToPlay"></activity>
+        <activity android:name=".EasyActivity"></activity>
+        <activity android:name=".NormalActivity"></activity>
+        <activity android:name=".ExpertActivity"></activity>
         <activity android:name=".Puzzlecode_Easy_English_1"/>
         <activity android:name=".Puzzlecode_Easy_English_2"/>
         <activity android:name=".Puzzlecode_Easy_English_3"/>
@@ -33,7 +36,24 @@
         <activity android:name=".Puzzlecode_Easy_Malay_1"/>
         <activity android:name=".Puzzlecode_Easy_Malay_2"/>
         <activity android:name=".Puzzlecode_Easy_Malay_3"/>
-        <activity android:name=".EasyActivity"></activity>
-        </application>
+        <activity android:name=".Puzzlecode_Normal_English_1"></activity>
+        <activity android:name=".Puzzlecode_Normal_English_2"></activity>
+        <activity android:name=".Puzzlecode_Normal_English_3"></activity>
+        <activity android:name=".Puzzlecode_Normal_Chinese_1"></activity>
+        <activity android:name=".Puzzlecode_Normal_Chinese_2"></activity>
+        <activity android:name=".Puzzlecode_Normal_Chinese_3"></activity>
+        <activity android:name=".Puzzlecode_Normal_Malay_1"></activity>
+        <activity android:name=".Puzzlecode_Normal_Malay_2"></activity>
+        <activity android:name=".Puzzlecode_Normal_Malay_3"></activity>
+        <activity android:name=".Puzzlecode_Expert_English_1"></activity>
+        <activity android:name=".Puzzlecode_Expert_English_2"></activity>
+        <activity android:name=".Puzzlecode_Expert_English_3"></activity>
+        <activity android:name=".Puzzlecode_Expert_Chinese_1"></activity>
+        <activity android:name=".Puzzlecode_Expert_Chinese_2"></activity>
+        <activity android:name=".Puzzlecode_Expert_Chinese_3"></activity>
+        <activity android:name=".Puzzlecode_Expert_Malay_1"></activity>
+        <activity android:name=".Puzzlecode_Expert_Malay_2"></activity>
+        <activity android:name=".Puzzlecode_Expert_Malay_3"></activity>
+    </application>
 
 </manifest>
