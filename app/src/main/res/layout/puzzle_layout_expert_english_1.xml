@@ -9,7 +9,7 @@
     <!-- Top section with logo and stars -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="60dp"
         android:layout_weight="0.1"
         android:background="@color/red"
         android:orientation="horizontal">
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="0.05"
         android:orientation="horizontal">
 
@@ -128,23 +128,27 @@
         android:layout_width="380dp"
         android:layout_height="350dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_weight="0.01"
+        android:layout_marginBottom="55dp"
         android:background="@drawable/hexagongiant">
 
         <!-- LinearLayout for the puzzle buttons -->
+
+        <!-- Result indicator -->
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_height="397dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_letter_top1"
@@ -205,8 +209,8 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_letter_left2"
@@ -228,11 +232,10 @@
                     android:background="@drawable/transparent_button"
                     android:text="I"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"/>
+                    android:textSize="60sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Result indicator -->
         <ImageView
             android:id="@+id/result_indicator"
             android:layout_width="50dp"
@@ -241,20 +244,23 @@
             android:visibility="gone"
             android:scaleType="centerInside" />
 
-        <!-- Try again button -->
-        <Button
-            android:id="@+id/btn_try_again"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:visibility="gone"
-            android:text="Try Again"
-            android:backgroundTint="@color/red"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+
     </FrameLayout>
 
     <!-- Bottom buttons -->
+
+    <!-- Try again button -->
+    <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Try Again"
+        android:background="@drawable/tryagain"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"/>
+
     <Button
         android:id="@+id/btn_home"
         android:layout_width="wrap_content"
@@ -265,4 +271,5 @@
         android:backgroundTint="#FFC000"
         android:textColor="@android:color/white"
         android:textSize="40sp"/>
+
 </LinearLayout>

@@ -22,6 +22,7 @@ public class DifficultySelection extends AppCompatActivity {
         View easyButton = findViewById(R.id.easyBtn);
         View normalButton = findViewById(R.id.normalBtn);
         View hardButton = findViewById(R.id.expertBtn);
+        Button btnHome = findViewById(R.id.btn_home);
 
         // Set click listeners for buttons
         easyButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,12 @@ public class DifficultySelection extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DifficultySelection.this, ExpertActivity.class);
                 startActivity(intent);
+            }
+        });
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DifficultySelection.this, MainActivity.class));
             }
         });
 

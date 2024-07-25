@@ -36,7 +36,6 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
         ImageView resultIndicator = findViewById(R.id.result_indicator);
         Button btnTryAgain = findViewById(R.id.btn_try_again);
         Button btnHome = findViewById(R.id.btn_home);
-        Button btnUndo = findViewById(R.id.btn_undo);
 
 
         View.OnClickListener letterClickListener = new View.OnClickListener() {
@@ -74,13 +73,6 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        btnUndo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //undoLastMove();
-            }
-        });
     }
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
@@ -91,7 +83,6 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
         }
 
         boolean allLettersCorrect = true;
-        Button btnUndo = findViewById(R.id.btn_undo);
         for (int i = 0; i < formedWord.length(); i++) {
             char enteredLetter = formedWord.charAt(i);
             char correctLetter = correctWord.charAt(i);
@@ -109,7 +100,6 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
         } else {
             resultIndicator.setImageResource(R.drawable.wrong);
             btnTryAgain.setVisibility(View.VISIBLE);
-            btnUndo.setVisibility(View.VISIBLE);
         }
 
         resultIndicator.setVisibility(View.VISIBLE);

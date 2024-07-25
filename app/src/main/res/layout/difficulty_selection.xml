@@ -37,7 +37,17 @@
     <include layout="@layout/easy_button" />
     <include layout="@layout/normal_buttons" />
     <include layout="@layout/expert_buttons" />
-
+    <!-- Bottom buttons -->
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Home page"
+        android:backgroundTint="#FFC000"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"/>
 
 
 </LinearLayout>
