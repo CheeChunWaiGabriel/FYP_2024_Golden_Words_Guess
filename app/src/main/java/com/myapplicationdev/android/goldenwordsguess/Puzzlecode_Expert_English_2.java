@@ -18,7 +18,7 @@ public class Puzzlecode_Expert_English_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.puzzle_layout_expert_english_3);
+        setContentView(R.layout.puzzle_layout_expert_english_2);
 
         boxes = new TextView[]{
                 findViewById(R.id.box1),
