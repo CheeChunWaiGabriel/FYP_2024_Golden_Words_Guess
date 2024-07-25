@@ -13,7 +13,7 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
 
     private TextView[] boxes;
     private int currentBoxIndex = 0;
-    private final String correctWord = "TAXES";
+    private final String correctWord = "CHAIR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
