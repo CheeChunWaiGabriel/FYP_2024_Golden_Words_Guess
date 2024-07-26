@@ -9,8 +9,8 @@
     <!-- Top section with logo and stars -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_weight="0.1"
+        android:layout_height="0dp"
+        android:layout_weight="0.065"
         android:background="@color/red"
         android:orientation="horizontal">
 
@@ -138,7 +138,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="397dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -254,7 +254,7 @@
         android:id="@+id/btn_try_again"
         android:layout_width="50dp"
         android:layout_height="50dp"
-
+        android:visibility="gone"
         android:layout_gravity="bottom|center_horizontal"
         android:text="Try Again"
         android:background="@drawable/tryagain"
