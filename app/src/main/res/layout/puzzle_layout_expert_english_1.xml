@@ -34,7 +34,7 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star"/>
+            app:srcCompat="@drawable/star" />
 
         <ImageView
             android:id="@+id/levelStar2"
@@ -45,7 +45,7 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star"/>
+            app:srcCompat="@drawable/star" />
 
         <ImageView
             android:id="@+id/levelStar3"
@@ -56,7 +56,7 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star"/>
+            app:srcCompat="@drawable/star" />
     </LinearLayout>
 
     <!-- Empty boxes section -->
@@ -125,11 +125,10 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="380dp"
-        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
         android:layout_gravity="center"
         android:layout_weight="0.01"
-        android:layout_marginBottom="55dp"
         android:background="@drawable/hexagongiant">
 
         <!-- LinearLayout for the puzzle buttons -->
@@ -236,6 +235,7 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Result indicator -->
         <ImageView
             android:id="@+id/result_indicator"
             android:layout_width="50dp"
@@ -244,22 +244,22 @@
             android:visibility="gone"
             android:scaleType="centerInside" />
 
-
+        <!-- Try again button -->
+        <Button
+            android:id="@+id/btn_try_again"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:layout_weight="0.01"
+            android:visibility="gone"
+            android:background="@drawable/tryagain"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
     </FrameLayout>
 
     <!-- Bottom buttons -->
-
-    <!-- Try again button -->
-    <Button
-        android:id="@+id/btn_try_again"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:visibility="gone"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="Try Again"
-        android:background="@drawable/tryagain"
-        android:textColor="@android:color/white"
-        android:textSize="40sp"/>
 
     <Button
         android:id="@+id/btn_home"

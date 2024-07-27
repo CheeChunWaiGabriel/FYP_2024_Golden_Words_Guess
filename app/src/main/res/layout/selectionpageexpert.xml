@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.15"
+        android:layout_weight="0.1"
         android:background="@color/red"
         android:orientation="horizontal">
 
@@ -19,9 +19,9 @@
             android:layout_gravity="bottom|end"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            app:srcCompat="@drawable/logo" />
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/logo"
+           />
 
         <ImageView
             android:id="@+id/levelStar1"
@@ -30,8 +30,7 @@
             android:layout_gravity="bottom|end"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
+            android:layout_weight="0.25"
             app:srcCompat="@drawable/star" />
 
         <ImageView
@@ -41,9 +40,9 @@
             android:layout_gravity="bottom|end"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star" />
+            android:layout_weight="0.25"
+            app:srcCompat="@drawable/star"
+           />
 
         <ImageView
             android:id="@+id/levelStar3"
@@ -52,9 +51,9 @@
             android:layout_gravity="bottom|end"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:paddingBottom="20dp"
-            app:srcCompat="@drawable/star" />
+            android:layout_weight="0.25"
+            app:srcCompat="@drawable/star"
+            />
     </LinearLayout>
 
     <TextView
@@ -62,8 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/chooseLevel"
         android:textSize="40sp"
         android:textStyle="bold" />
@@ -656,7 +654,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/red">
+        android:background="@color/red"
+        android:layout_weight="0.075">
 
         <Button
             android:id="@+id/htpHomeButtonExpert"
@@ -664,7 +663,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:background="@color/yellow"
             android:text="@string/homePage"
             android:textColor="@android:color/black"

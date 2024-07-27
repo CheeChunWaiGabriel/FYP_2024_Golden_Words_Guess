@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         // Initialize buttons
         View startButton = findViewById(R.id.startBtn);
         View howtoplayButton = findViewById(R.id.htpBtn);
-        Testbutton = findViewById(R.id.btnTest);
         // Set click listeners for buttons
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,13 +34,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HowToPlay.class);
-                startActivity(intent);
-            }
-        });
-        Testbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Puzzlecode.class);
                 startActivity(intent);
             }
         });
