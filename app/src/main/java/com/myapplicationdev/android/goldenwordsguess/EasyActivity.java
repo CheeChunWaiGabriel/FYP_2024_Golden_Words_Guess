@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class EasyActivity extends AppCompatActivity {
-    Button btnHome;
+    Button btnBack;
     Button btnPuzzle1;
     Button btnPuzzle2;
     Button btnPuzzle3;
@@ -27,7 +27,7 @@ public class EasyActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.selectionpageeasy);
 
-        btnHome = findViewById(R.id.htpHomeButtonEasy);
+        btnBack = findViewById(R.id.htpBackEasy);
         btnPuzzle1 = findViewById(R.id.btnLevel1Easy);
         btnPuzzle2 = findViewById(R.id.btnLevel2Easy);
         btnPuzzle3 = findViewById(R.id.btnLevel3Easy);
@@ -39,10 +39,10 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle9 = findViewById(R.id.btnLevel9Easy);
 
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EasyActivity.this, MainActivity.class);
+                Intent intent = new Intent(EasyActivity.this, DifficultySelection.class);
                 startActivity(intent);
             }
         });

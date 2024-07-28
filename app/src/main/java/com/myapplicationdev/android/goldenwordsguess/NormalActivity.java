@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class NormalActivity extends AppCompatActivity {
-    Button btnHome;
+    Button btnBack;
     Button btnPuzzle1;
     Button btnPuzzle2;
     Button btnPuzzle3;
@@ -27,7 +27,7 @@ public class NormalActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.selectionpagenormal);
 
-        btnHome = findViewById(R.id.htpHomeButtonNormal);
+        btnBack = findViewById(R.id.htpBackNormal);
         btnPuzzle1 = findViewById(R.id.btnLevel1Normal);
         btnPuzzle2 = findViewById(R.id.btnLevel2Normal);
         btnPuzzle3 = findViewById(R.id.btnLevel3Normal);
@@ -39,10 +39,10 @@ public class NormalActivity extends AppCompatActivity {
         btnPuzzle9 = findViewById(R.id.btnLevel9Normal);
 
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NormalActivity.this, MainActivity.class);
+                Intent intent = new Intent(NormalActivity.this, DifficultySelection.class);
                 startActivity(intent);
             }
         });

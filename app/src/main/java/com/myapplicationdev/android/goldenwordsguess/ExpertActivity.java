@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ExpertActivity extends AppCompatActivity {
-    Button btnHome;
+    Button btnBack;
     Button btnPuzzle1;
     Button btnPuzzle2;
     Button btnPuzzle3;
@@ -27,7 +27,7 @@ public class ExpertActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.selectionpageexpert);
 
-        btnHome = findViewById(R.id.htpHomeButtonExpert);
+        btnBack = findViewById(R.id.htpBackExpert);
         btnPuzzle1 = findViewById(R.id.btnLevel1Expert);
         btnPuzzle2 = findViewById(R.id.btnLevel2Expert);
         btnPuzzle3 = findViewById(R.id.btnLevel3Expert);
@@ -39,10 +39,10 @@ public class ExpertActivity extends AppCompatActivity {
         btnPuzzle9 = findViewById(R.id.btnLevel9Expert);
 
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExpertActivity.this, MainActivity.class);
+                Intent intent = new Intent(ExpertActivity.this, DifficultySelection.class);
                 startActivity(intent);
             }
         });
