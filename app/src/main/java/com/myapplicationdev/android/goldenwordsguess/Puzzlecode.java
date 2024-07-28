@@ -71,7 +71,6 @@ public class Puzzlecode extends AppCompatActivity {
         ImageView resultIndicator = findViewById(R.id.result_indicator);
         Button btnTryAgain = findViewById(R.id.btn_try_again);
         Button btnUndo = findViewById(R.id.btn_undo);
-
         if (correctWord.charAt(index) == letter.charAt(0)) {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
             if (index == boxes.length - 1) {

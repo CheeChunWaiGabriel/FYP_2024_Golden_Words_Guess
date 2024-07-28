@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat;
 public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
 
     private TextView[] boxes;
+    private Button[] buttons;
     private int currentBoxIndex = 0;
     private final String correctWord = "FRIEND";
 
@@ -40,12 +41,19 @@ public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
         Button btnHome = findViewById(R.id.btn_home);
         ImageView resultIndicator = findViewById(R.id.result_indicator);
 
+        // Store all buttons in an array for easier resetting
+        buttons = new Button[]{
+                btnTop, btnTop2, btnLeft1, btnRight1, btnLeft2, btnRight2
+        };
+
         View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentBoxIndex < boxes.length) {
                     Button button = (Button) view;
                     boxes[currentBoxIndex].setText(button.getText());
+                    button.setTextColor(ContextCompat.getColor(Puzzlecode_Expert_English_1.this, R.color.grey));
+                    button.setEnabled(false);
                     currentBoxIndex++;
 
                     if (currentBoxIndex == boxes.length) {
@@ -55,12 +63,9 @@ public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
             }
         };
 
-        btnTop.setOnClickListener(letterClickListener);
-        btnTop2.setOnClickListener(letterClickListener);
-        btnLeft1.setOnClickListener(letterClickListener);
-        btnRight1.setOnClickListener(letterClickListener);
-        btnLeft2.setOnClickListener(letterClickListener);
-        btnRight2.setOnClickListener(letterClickListener);
+        for (Button button : buttons) {
+            button.setOnClickListener(letterClickListener);
+        }
 
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +84,6 @@ public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
     }
 
     private void verifyWord(ImageView resultIndicator, Button btnTryAgain) {
-
         StringBuilder formedWord = new StringBuilder();
         for (TextView box : boxes) {
             formedWord.append(box.getText().toString());
@@ -111,11 +115,18 @@ public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
     private void resetGame(ImageView resultIndicator, Button btnTryAgain) {
         for (TextView box : boxes) {
             box.setText("");
+            box.setBackgroundResource(R.drawable.box_border);
         }
+
+        for (Button button : buttons) {
+            button.setEnabled(true);
+            button.setTextColor(ContextCompat.getColor(this, R.color.black));
+        }
+
         currentBoxIndex = 0;
         resultIndicator.setVisibility(View.GONE);
         btnTryAgain.setVisibility(View.GONE);
-
-       }
+    }
 }
+
 
