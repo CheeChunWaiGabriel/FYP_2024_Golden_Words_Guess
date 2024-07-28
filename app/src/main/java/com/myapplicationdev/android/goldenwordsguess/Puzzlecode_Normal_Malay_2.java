@@ -69,7 +69,7 @@ public class Puzzlecode_Normal_Malay_2 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode_Normal_Malay_2.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Normal_Malay_2.this, NormalActivity.class);
                 startActivity(intent);
             }
         });

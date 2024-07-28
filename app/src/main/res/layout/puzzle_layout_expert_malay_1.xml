@@ -244,14 +244,16 @@
         <!-- Try again button -->
         <Button
             android:id="@+id/btn_try_again"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:layout_weight="0.01"
             android:visibility="gone"
-            android:text="Try Again"
+            android:background="@drawable/tryagain"
             android:backgroundTint="@color/red"
             android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+            android:textSize="40sp" />
     </FrameLayout>
 
     <!-- Bottom buttons -->
@@ -261,7 +263,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
-        android:text="Home page"
+        android:text="Back"
         android:backgroundTint="#FFC000"
         android:textColor="@android:color/white"
         android:textSize="40sp"/>

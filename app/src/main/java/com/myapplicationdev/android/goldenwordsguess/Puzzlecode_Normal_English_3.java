@@ -67,7 +67,7 @@ public class Puzzlecode_Normal_English_3 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode_Normal_English_3.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Normal_English_3.this, NormalActivity.class);
                 startActivity(intent);
             }
         });

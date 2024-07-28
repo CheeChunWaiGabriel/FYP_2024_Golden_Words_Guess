@@ -106,7 +106,7 @@ public class Puzzlecode_Easy_English_2 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Puzzlecode_Easy_English_2.this, MainActivity.class));
+                startActivity(new Intent(Puzzlecode_Easy_English_2.this, EasyActivity.class));
             }
         });
 

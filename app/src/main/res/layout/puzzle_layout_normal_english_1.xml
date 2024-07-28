@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
-        android:text="Home page"
+        android:text="Back"
         android:backgroundTint="#FFC000"
         android:textColor="@android:color/white"
         android:textSize="40sp"/>

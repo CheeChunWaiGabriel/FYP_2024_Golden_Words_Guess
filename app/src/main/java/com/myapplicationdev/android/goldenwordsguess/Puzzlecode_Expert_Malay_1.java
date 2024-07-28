@@ -71,7 +71,7 @@ public class Puzzlecode_Expert_Malay_1 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Puzzlecode_Expert_Malay_1.this, MainActivity.class);
+                Intent intent = new Intent(Puzzlecode_Expert_Malay_1.this, ExpertActivity.class);
                 startActivity(intent);
             }
         });

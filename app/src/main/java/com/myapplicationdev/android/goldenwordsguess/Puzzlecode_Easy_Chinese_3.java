@@ -106,7 +106,7 @@ public class Puzzlecode_Easy_Chinese_3 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Puzzlecode_Easy_Chinese_3.this, MainActivity.class));
+                startActivity(new Intent(Puzzlecode_Easy_Chinese_3.this, EasyActivity.class));
             }
         });
 
