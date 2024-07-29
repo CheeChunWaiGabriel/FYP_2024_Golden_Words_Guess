@@ -56,6 +56,7 @@ public class Puzzlecode_Expert_English_3 extends AppCompatActivity {
         };
 
         btnTop.setOnClickListener(letterClickListener);
+        btnTop2.setOnClickListener(letterClickListener);
         btnLeft1.setOnClickListener(letterClickListener);
         btnRight1.setOnClickListener(letterClickListener);
         btnLeft2.setOnClickListener(letterClickListener);
