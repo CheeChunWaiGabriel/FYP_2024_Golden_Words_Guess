@@ -227,7 +227,7 @@
                     android:layout_marginLeft="70dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/transparent_button"
-                    android:text="I"
+                    android:text="O"
                     android:textColor="@android:color/black"
                     android:textSize="60sp" />
             </LinearLayout>
