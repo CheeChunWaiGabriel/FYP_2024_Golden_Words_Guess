@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat;
 public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
 
     private TextView[] boxes;
+    private Button[] buttons;
     private int currentBoxIndex = 0;
     private final String correctWord = "CHAIR";
 
@@ -37,6 +38,9 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
         Button btnTryAgain = findViewById(R.id.btn_try_again);
         Button btnHome = findViewById(R.id.btn_home);
 
+        buttons = new Button[]{
+                btnTop, btnLeft1, btnRight1, btnLeft2, btnRight2
+        };
 
         View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
@@ -44,6 +48,8 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
                 if (currentBoxIndex < boxes.length) {
                     Button button = (Button) view;
                     boxes[currentBoxIndex].setText(button.getText());
+                    button.setTextColor(ContextCompat.getColor(Puzzlecode_Normal_English_1.this, R.color.grey));
+                    button.setEnabled(false);
                     currentBoxIndex++;
 
                     if (currentBoxIndex == boxes.length) {
@@ -52,6 +58,10 @@ public class Puzzlecode_Normal_English_1 extends AppCompatActivity {
                 }
             }
         };
+
+        for (Button button : buttons) {
+            button.setOnClickListener(letterClickListener);
+        }
 
         btnTop.setOnClickListener(letterClickListener);
         btnLeft1.setOnClickListener(letterClickListener);

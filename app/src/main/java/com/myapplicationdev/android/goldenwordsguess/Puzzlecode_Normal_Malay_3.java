@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat;
 public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
 
     private TextView[] boxes;
+    private Button[] buttons;
     private int currentBoxIndex = 0;
     private final String correctWord = "KUBOR";
 
@@ -38,12 +39,18 @@ public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
         Button btnHome = findViewById(R.id.btn_home);
         ImageView resultIndicator = findViewById(R.id.result_indicator);
 
+        buttons = new Button[]{
+                btnTop, btnLeft1, btnRight1, btnLeft2, btnRight2
+        };
+
         View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentBoxIndex < boxes.length) {
                     Button button = (Button) view;
                     boxes[currentBoxIndex].setText(button.getText());
+                    button.setTextColor(ContextCompat.getColor(Puzzlecode_Normal_Malay_3.this, R.color.grey));
+                    button.setEnabled(false);
                     currentBoxIndex++;
 
                     if (currentBoxIndex == boxes.length) {
@@ -52,6 +59,10 @@ public class Puzzlecode_Normal_Malay_3 extends AppCompatActivity {
                 }
             }
         };
+
+        for (Button button : buttons) {
+            button.setOnClickListener(letterClickListener);
+        }
 
         btnTop.setOnClickListener(letterClickListener);
         btnLeft1.setOnClickListener(letterClickListener);
