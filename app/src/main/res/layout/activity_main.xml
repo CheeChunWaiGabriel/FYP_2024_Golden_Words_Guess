@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="293dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/goldenwords" />
+        android:src="@drawable/golden_words_guess_logo_2" />
 
     <include layout="@layout/start_button" />
     <include layout="@layout/howtoplay_button" />
