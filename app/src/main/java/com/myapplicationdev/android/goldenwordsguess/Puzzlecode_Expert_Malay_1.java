@@ -8,10 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class Puzzlecode_Expert_Malay_1 extends AppCompatActivity {
 
     private TextView[] boxes;
+    private Button[] buttons;
     private int currentBoxIndex = 0;
     private final String correctWord = "BELIAU";
 
@@ -39,12 +41,20 @@ public class Puzzlecode_Expert_Malay_1 extends AppCompatActivity {
         Button btnHome = findViewById(R.id.btn_home);
         ImageView resultIndicator = findViewById(R.id.result_indicator);
 
+
+        // Store all buttons in an array for easier resetting
+        buttons = new Button[]{
+                btnTop1, btnTop2, btnLeft1, btnRight1, btnLeft2, btnRight2
+        };
+
         View.OnClickListener letterClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (currentBoxIndex < boxes.length) {
                     Button button = (Button) view;
                     boxes[currentBoxIndex].setText(button.getText());
+                    button.setTextColor(ContextCompat.getColor(Puzzlecode_Expert_Malay_1.this, R.color.grey));
+                    button.setEnabled(false);
                     currentBoxIndex++;
 
                     if (currentBoxIndex == boxes.length) {
@@ -53,13 +63,9 @@ public class Puzzlecode_Expert_Malay_1 extends AppCompatActivity {
                 }
             }
         };
-
-        btnTop1.setOnClickListener(letterClickListener);
-        btnTop2.setOnClickListener(letterClickListener);
-        btnLeft1.setOnClickListener(letterClickListener);
-        btnRight1.setOnClickListener(letterClickListener);
-        btnLeft2.setOnClickListener(letterClickListener);
-        btnRight2.setOnClickListener(letterClickListener);
+        for (Button button : buttons) {
+            button.setOnClickListener(letterClickListener);
+        }
 
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
