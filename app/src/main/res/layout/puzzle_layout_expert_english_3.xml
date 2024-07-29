@@ -125,13 +125,11 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="380dp"
-        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
         android:layout_gravity="center"
         android:layout_weight="0.01"
-        android:layout_marginBottom="55dp"
         android:background="@drawable/hexagongiant">
-
         <!-- LinearLayout for the puzzle buttons -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -248,7 +246,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="250dp"
             android:layout_weight="0.01"
             android:visibility="gone"
             android:background="@drawable/tryagain"

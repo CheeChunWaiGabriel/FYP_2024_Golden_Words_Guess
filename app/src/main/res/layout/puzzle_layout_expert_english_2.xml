@@ -125,11 +125,10 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="380dp"
-        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
         android:layout_gravity="center"
         android:layout_weight="0.01"
-        android:layout_marginBottom="55dp"
         android:background="@drawable/hexagongiant">
 
         <!-- LinearLayout for the puzzle buttons -->
@@ -243,19 +242,21 @@
             android:scaleType="centerInside" />
 
 
-    </FrameLayout>
-
     <!-- Try again button -->
     <Button
         android:id="@+id/btn_try_again"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:layout_weight="0.01"
         android:visibility="gone"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="Try Again"
         android:background="@drawable/tryagain"
+        android:backgroundTint="@color/red"
         android:textColor="@android:color/white"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
+
+    </FrameLayout>
 
     <!-- Bottom buttons -->
     <Button
