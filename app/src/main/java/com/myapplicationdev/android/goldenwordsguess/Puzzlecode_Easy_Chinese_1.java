@@ -1,6 +1,7 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -60,11 +61,41 @@ public class Puzzlecode_Easy_Chinese_1 extends AppCompatActivity {
     }
 
     private void handleLetterSelection(Button button) {
+        // Set the text of the current box to the selected letter
         boxes[currentBoxIndex].setText(button.getText());
-        button.setTextColor(ContextCompat.getColor(this, R.color.grey));
+
+        // Change the button color and disable it
+        button.setTextColor(ContextCompat.getColor(this, R.color.black));
         button.setEnabled(false);
+
+        // Animate the button to indicate it has been pressed
+        animateButtonPress(button);
+
+        // Clear shadow layer
+        button.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
+
+        // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
+    }
+
+    private void animateButtonPress(Button button) {
+        // Create a simple scale animation to make the button appear pressed
+        button.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        button.animate()
+                                .scaleX(1f)
+                                .scaleY(1f)
+                                .setDuration(100)
+                                .start();
+                    }
+                })
+                .start();
     }
 
     private void verifyLetter(String letter, int index) {
@@ -119,24 +150,9 @@ public class Puzzlecode_Easy_Chinese_1 extends AppCompatActivity {
     }
 
     private void resetGame() {
-        ImageView resultIndicator = findViewById(R.id.result_indicator);
-        Button btnTryAgain = findViewById(R.id.btn_try_again);
-        Button btnUndo = findViewById(R.id.btn_undo);
-
-        for (TextView box : boxes) {
-            box.setText("");
-            box.setBackgroundResource(R.drawable.box_border); // Reset to original drawable
-        }
-
-        currentBoxIndex = 0;
-        resultIndicator.setVisibility(View.GONE);
-        btnTryAgain.setVisibility(View.GONE);
-        btnUndo.setVisibility(View.GONE);
-
-        for (Button letterButton : letterButtons) {
-            letterButton.setEnabled(true);
-            letterButton.setTextColor(ContextCompat.getColor(this, R.color.black));
-        }
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     private void undoLastMove() {

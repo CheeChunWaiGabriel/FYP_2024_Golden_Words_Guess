@@ -1,8 +1,10 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -70,12 +72,44 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
     }
 
     private void handleLetterSelection(Button button) {
+        // Set the text of the current box to the selected letter
         boxes[currentBoxIndex].setText(button.getText());
-        button.setTextColor(ContextCompat.getColor(this, R.color.grey));
+
+        // Change the button color and disable it
+        button.setTextColor(ContextCompat.getColor(this, R.color.black));
         button.setEnabled(false);
+
+        // Animate the button to indicate it has been pressed
+        animateButtonPress(button);
+
+        // Clear shadow layer
+        button.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
+
+        // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
     }
+
+    private void animateButtonPress(Button button) {
+        // Create a simple scale animation to make the button appear pressed
+        button.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        button.animate()
+                                .scaleX(1f)
+                                .scaleY(1f)
+                                .setDuration(100)
+                                .start();
+                    }
+                })
+                .start();
+    }
+
+
 
     private void verifyLetter(String letter, int index) {
         if (correctWord.charAt(index) == letter.charAt(0)) {
@@ -174,4 +208,5 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
             letterButton.setEnabled(true);
         }
     }
+
 }

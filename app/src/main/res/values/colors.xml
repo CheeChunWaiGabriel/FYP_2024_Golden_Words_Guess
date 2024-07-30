@@ -8,4 +8,6 @@
     <color name="wrong_letter_color">#F44336</color>
     <color name="correct_letter_color">#4CAF50</color>
     <color name="grey">#BDBDBD</color>
+    <color name="blue">#0e3763</color>
+    <color name="purple">#d754fa</color>
 </resources>
