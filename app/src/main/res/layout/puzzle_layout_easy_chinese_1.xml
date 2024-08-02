@@ -50,38 +50,38 @@
         <TextView
             android:id="@+id/box1"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="30sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box2"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="30sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box3"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="30sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box4"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="30sp"/>
+            android:textSize="50sp"/>
     </LinearLayout>
 
     <!-- Diamond shape with buttons -->
@@ -134,7 +134,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="一"
                     android:textColor="@android:color/black"
-                    android:textSize="50sp"/>
+                    android:textSize="50sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
 
                 <!-- Button on the right -->
                 <Button
@@ -145,7 +149,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="帆"
                     android:textColor="@android:color/black"
-                    android:textSize="50sp"/>
+                    android:textSize="50sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
             </LinearLayout>
 
             <!-- Button at the bottom -->
@@ -158,7 +166,11 @@
                 android:background="@drawable/transparent_button"
                 android:text="风"
                 android:textColor="@android:color/black"
-                android:textSize="50sp"/>
+                android:textSize="50sp"
+                android:shadowColor="#E68900"
+                android:shadowDx="8"
+                android:shadowDy="20"
+                android:shadowRadius="3"/>
         </LinearLayout>
 
         <!-- Result indicator -->

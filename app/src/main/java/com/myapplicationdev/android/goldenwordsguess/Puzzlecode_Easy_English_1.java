@@ -12,6 +12,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
 
     private TextView[] boxes;
@@ -25,9 +28,12 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
     private ImageView resultIndicator;
     private MediaPlayer buttonClick;
     private MediaPlayer correct;
+    private MediaPlayer congratulations;
     private MediaPlayer wrong;
     private MediaPlayer retry;
     private MediaPlayer undo;
+
+    private Set<String> correctLettersPressed = new HashSet<>(); // Track correctly pressed letters
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +65,8 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
         btnUndo = findViewById(R.id.btn_undo);
         resultIndicator = findViewById(R.id.result_indicator);
         buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
-        correct = MediaPlayer.create(this, R.raw.clapping);
+        congratulations = MediaPlayer.create(this, R.raw.clapping);
+        correct = MediaPlayer.create(this, R.raw.correct);
         wrong = MediaPlayer.create(this, R.raw.wrong);
         retry = MediaPlayer.create(this, R.raw.retry);
         undo = MediaPlayer.create(this, R.raw.undo);
@@ -86,15 +93,13 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
         // Set the text of the current box to the selected letter
         boxes[currentBoxIndex].setText(button.getText());
 
-        // Change the button color and disable it
-        button.setTextColor(ContextCompat.getColor(this, R.color.black));
-        button.setEnabled(false);
-
         // Animate the button to indicate it has been pressed
         animateButtonPress(button);
 
         // Clear shadow layer
         button.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
+
+        button.setEnabled(false);
 
         // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
@@ -120,17 +125,22 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
                 .start();
     }
 
-
-
     private void verifyLetter(String letter, int index) {
         if (correctWord.charAt(index) == letter.charAt(0)) {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
+            correct.start();
+
+            // Add the letter to the set of correctly pressed letters
+            correctLettersPressed.add(letter);
+
             if (index == boxes.length - 1) {
+                congratulations.start();
                 showResultIndicator(R.drawable.correct, resultIndicator);
             }
         } else {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
             showResultIndicator(R.drawable.wrong, resultIndicator);
+            wrong.start();
             btnTryAgain.setVisibility(View.VISIBLE);
             btnUndo.setVisibility(View.VISIBLE);
             disableUnselectedLetterButtons();
@@ -147,6 +157,7 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 resetGame();
+                retry.start();
             }
         });
 
@@ -154,6 +165,7 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Puzzlecode_Easy_English_1.this, EasyActivity.class));
+                buttonClick.start();
             }
         });
 
@@ -161,25 +173,15 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 undoLastMove();
+                undo.start();
             }
         });
     }
 
     private void resetGame() {
-        for (TextView box : boxes) {
-            box.setText("");
-            box.setBackgroundResource(R.drawable.box_border); // Reset to original drawable
-        }
-
-        currentBoxIndex = 0;
-        resultIndicator.setVisibility(View.GONE);
-        btnTryAgain.setVisibility(View.GONE);
-        btnUndo.setVisibility(View.GONE);
-
-        for (Button letterButton : letterButtons) {
-            letterButton.setEnabled(true);
-            letterButton.setTextColor(ContextCompat.getColor(this, R.color.black));
-        }
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     private void undoLastMove() {
@@ -192,8 +194,11 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
 
             for (Button letterButton : letterButtons) {
                 if (letterButton.getText().toString().equals(lastLetter)) {
-                    letterButton.setEnabled(true);
-                    letterButton.setTextColor(ContextCompat.getColor(this, R.color.black));
+                    // If the letter was correct, don't enable it again
+                    if (!correctLettersPressed.contains(lastLetter)) {
+                        letterButton.setEnabled(true);
+                        letterButton.setShadowLayer(8, 20, 3, Color.parseColor("#E68900"));
+                    }
                     break;
                 }
             }
@@ -216,8 +221,10 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
 
     private void enableAllLetterButtons() {
         for (Button letterButton : letterButtons) {
-            letterButton.setEnabled(true);
+            // Enable only buttons that are not in the correctLettersPressed set
+            if (!correctLettersPressed.contains(letterButton.getText().toString())) {
+                letterButton.setEnabled(true);
+            }
         }
     }
-
 }

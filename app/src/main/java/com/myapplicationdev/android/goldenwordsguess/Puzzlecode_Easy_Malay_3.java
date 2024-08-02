@@ -1,6 +1,8 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,12 +12,28 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
 
     private TextView[] boxes;
     private Button[] letterButtons;
     private int currentBoxIndex = 0;
     private final String correctWord = "LARI";
+
+    private Button btnTryAgain;
+    private Button btnHome;
+    private Button btnUndo;
+    private ImageView resultIndicator;
+    private MediaPlayer buttonClick;
+    private MediaPlayer correct;
+    private MediaPlayer congratulations;
+    private MediaPlayer wrong;
+    private MediaPlayer retry;
+    private MediaPlayer undo;
+
+    private Set<String> correctLettersPressed = new HashSet<>(); // Track correctly pressed letters
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +59,18 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
                 findViewById(R.id.btn_letter_right),
                 findViewById(R.id.btn_letter_bottom)
         };
+
+        btnTryAgain = findViewById(R.id.btn_try_again);
+        btnHome = findViewById(R.id.btn_home);
+        btnUndo = findViewById(R.id.btn_undo);
+        resultIndicator = findViewById(R.id.result_indicator);
+        buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
+        congratulations = MediaPlayer.create(this, R.raw.clapping);
+        correct = MediaPlayer.create(this, R.raw.correct);
+        wrong = MediaPlayer.create(this, R.raw.wrong);
+        retry = MediaPlayer.create(this, R.raw.retry);
+        undo = MediaPlayer.create(this, R.raw.undo);
+
     }
 
     private void setLetterButtonListeners() {
@@ -60,26 +90,57 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
     }
 
     private void handleLetterSelection(Button button) {
+        // Set the text of the current box to the selected letter
         boxes[currentBoxIndex].setText(button.getText());
-        button.setTextColor(ContextCompat.getColor(this, R.color.grey));
+
+        // Animate the button to indicate it has been pressed
+        animateButtonPress(button);
+
+        // Clear shadow layer
+        button.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
+
         button.setEnabled(false);
+
+        // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
     }
 
-    private void verifyLetter(String letter, int index) {
-        ImageView resultIndicator = findViewById(R.id.result_indicator);
-        Button btnTryAgain = findViewById(R.id.btn_try_again);
-        Button btnUndo = findViewById(R.id.btn_undo);
+    private void animateButtonPress(Button button) {
+        // Create a simple scale animation to make the button appear pressed
+        button.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        button.animate()
+                                .scaleX(1f)
+                                .scaleY(1f)
+                                .setDuration(100)
+                                .start();
+                    }
+                })
+                .start();
+    }
 
+    private void verifyLetter(String letter, int index) {
         if (correctWord.charAt(index) == letter.charAt(0)) {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.correct_letter_color));
+            correct.start();
+
+            // Add the letter to the set of correctly pressed letters
+            correctLettersPressed.add(letter);
+
             if (index == boxes.length - 1) {
+                congratulations.start();
                 showResultIndicator(R.drawable.correct, resultIndicator);
             }
         } else {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
             showResultIndicator(R.drawable.wrong, resultIndicator);
+            wrong.start();
             btnTryAgain.setVisibility(View.VISIBLE);
             btnUndo.setVisibility(View.VISIBLE);
             disableUnselectedLetterButtons();
@@ -92,14 +153,11 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
     }
 
     private void setControlButtonListeners() {
-        Button btnTryAgain = findViewById(R.id.btn_try_again);
-        Button btnHome = findViewById(R.id.btn_home);
-        Button btnUndo = findViewById(R.id.btn_undo);
-
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 resetGame();
+                retry.start();
             }
         });
 
@@ -107,6 +165,7 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Puzzlecode_Easy_Malay_3.this, EasyActivity.class));
+                buttonClick.start();
             }
         });
 
@@ -114,29 +173,15 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 undoLastMove();
+                undo.start();
             }
         });
     }
 
     private void resetGame() {
-        ImageView resultIndicator = findViewById(R.id.result_indicator);
-        Button btnTryAgain = findViewById(R.id.btn_try_again);
-        Button btnUndo = findViewById(R.id.btn_undo);
-
-        for (TextView box : boxes) {
-            box.setText("");
-            box.setBackgroundResource(R.drawable.box_border); // Reset to original drawable
-        }
-
-        currentBoxIndex = 0;
-        resultIndicator.setVisibility(View.GONE);
-        btnTryAgain.setVisibility(View.GONE);
-        btnUndo.setVisibility(View.GONE);
-
-        for (Button letterButton : letterButtons) {
-            letterButton.setEnabled(true);
-            letterButton.setTextColor(ContextCompat.getColor(this, R.color.black));
-        }
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     private void undoLastMove() {
@@ -149,16 +194,18 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
 
             for (Button letterButton : letterButtons) {
                 if (letterButton.getText().toString().equals(lastLetter)) {
-                    letterButton.setEnabled(true);
-                    letterButton.setTextColor(ContextCompat.getColor(this, R.color.black));
+                    // If the letter was correct, don't enable it again
+                    if (!correctLettersPressed.contains(lastLetter)) {
+                        letterButton.setEnabled(true);
+                        letterButton.setShadowLayer(8, 20, 3, Color.parseColor("#E68900"));
+                    }
                     break;
                 }
             }
 
-            ImageView resultIndicator = findViewById(R.id.result_indicator);
             resultIndicator.setVisibility(View.GONE);
-            findViewById(R.id.btn_try_again).setVisibility(View.GONE);
-            findViewById(R.id.btn_undo).setVisibility(View.GONE);
+            btnTryAgain.setVisibility(View.GONE);
+            btnUndo.setVisibility(View.GONE);
 
             enableAllLetterButtons();
         }
@@ -174,8 +221,10 @@ public class Puzzlecode_Easy_Malay_3 extends AppCompatActivity {
 
     private void enableAllLetterButtons() {
         for (Button letterButton : letterButtons) {
-            letterButton.setEnabled(true);
+            // Enable only buttons that are not in the correctLettersPressed set
+            if (!correctLettersPressed.contains(letterButton.getText().toString())) {
+                letterButton.setEnabled(true);
+            }
         }
     }
 }
-
