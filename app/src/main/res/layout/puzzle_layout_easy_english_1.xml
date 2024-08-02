@@ -130,7 +130,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="O"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"/>
+                    android:textSize="60sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3" />
 
                 <!-- Button on the right -->
                 <Button
@@ -141,7 +145,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="L"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"/>
+                    android:textSize="60sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3" />
             </LinearLayout>
 
             <!-- Button at the bottom -->
@@ -154,7 +162,11 @@
                 android:background="@drawable/transparent_button"
                 android:text="F"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"/>
+                android:textSize="60sp"
+                android:shadowColor="#E68900"
+                android:shadowDx="8"
+                android:shadowDy="20"
+                android:shadowRadius="3" />
         </LinearLayout>
 
         <!-- Result indicator -->

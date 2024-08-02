@@ -2,9 +2,9 @@ package com.myapplicationdev.android.goldenwordsguess;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +23,11 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
     private Button btnHome;
     private Button btnUndo;
     private ImageView resultIndicator;
+    private MediaPlayer buttonClick;
+    private MediaPlayer correct;
+    private MediaPlayer wrong;
+    private MediaPlayer retry;
+    private MediaPlayer undo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +58,12 @@ public class Puzzlecode_Easy_English_1 extends AppCompatActivity {
         btnHome = findViewById(R.id.btn_home);
         btnUndo = findViewById(R.id.btn_undo);
         resultIndicator = findViewById(R.id.result_indicator);
+        buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
+        correct = MediaPlayer.create(this, R.raw.clapping);
+        wrong = MediaPlayer.create(this, R.raw.wrong);
+        retry = MediaPlayer.create(this, R.raw.retry);
+        undo = MediaPlayer.create(this, R.raw.undo);
+
     }
 
     private void setLetterButtonListeners() {
