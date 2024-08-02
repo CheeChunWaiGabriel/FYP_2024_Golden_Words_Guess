@@ -208,9 +208,22 @@
             android:layout_height="50dp"
             android:layout_gravity="bottom|center_horizontal"
             android:visibility="gone"
-            android:layout_marginBottom="100dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="60dp"
             android:background="@drawable/tryagain"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"/>
+
+        <!-- Undo button -->
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/undo"
+            android:visibility="gone"
             android:textColor="@android:color/white"
             android:textSize="40sp"/>
     </FrameLayout>

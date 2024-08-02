@@ -18,7 +18,7 @@ import java.util.Set;
 public class Puzzlecode_Expert_English_1 extends AppCompatActivity {
 
     private TextView[] boxes;
-    private Button[] buttons;
+    private Button[] letterButtons;
     private int currentBoxIndex = 0;
     private final String correctWord = "FRIEND";
 
