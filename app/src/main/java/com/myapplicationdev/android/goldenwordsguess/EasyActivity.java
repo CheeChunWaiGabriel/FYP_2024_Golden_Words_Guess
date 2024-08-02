@@ -1,6 +1,7 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class EasyActivity extends AppCompatActivity {
     Button btnPuzzle7;
     Button btnPuzzle8;
     Button btnPuzzle9;
+    private MediaPlayer buttonClick;
 
 
     @Override
@@ -37,13 +39,15 @@ public class EasyActivity extends AppCompatActivity {
         btnPuzzle7 = findViewById(R.id.btnLevel7Easy);
         btnPuzzle8 = findViewById(R.id.btnLevel8Easy);
         btnPuzzle9 = findViewById(R.id.btnLevel9Easy);
-
+        buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, DifficultySelection.class);
                 startActivity(intent);
+                buttonClick.start();
+
             }
         });
 
@@ -52,6 +56,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_1.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -60,6 +65,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_2.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -68,6 +74,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_English_3.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -76,6 +83,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_1.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -84,6 +92,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_2.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -92,6 +101,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Chinese_3.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -100,6 +110,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this,Puzzlecode_Easy_Malay_1.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
 
@@ -108,6 +119,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Malay_2.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
         btnPuzzle9.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +127,7 @@ public class EasyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(EasyActivity.this, Puzzlecode_Easy_Malay_3.class);
                 startActivity(intent);
+                buttonClick.start();
             }
         });
     }

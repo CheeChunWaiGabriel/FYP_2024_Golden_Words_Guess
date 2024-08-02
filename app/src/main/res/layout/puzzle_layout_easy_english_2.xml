@@ -49,39 +49,39 @@
 
         <TextView
             android:id="@+id/box1"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="60sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box2"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="60sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box3"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="60sp"/>
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/box4"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/box_border"
             android:gravity="center"
-            android:textSize="60sp"/>
+            android:textSize="50sp"/>
     </LinearLayout>
 
     <!-- Diamond shape with buttons -->
@@ -108,7 +108,7 @@
                 android:background="@drawable/transparent_button"
                 android:text="P"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:shadowColor="#E68900"
                 android:shadowDx="8"
                 android:shadowDy="20"
@@ -132,7 +132,7 @@
                     android:background="@drawable/transparent_button"
                     android:text="D"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:shadowColor="#E68900"
                     android:shadowDx="8"
                     android:shadowDy="20"
@@ -147,7 +147,7 @@
                     android:background="@drawable/transparent_button"
                     android:text="N"
                     android:textColor="@android:color/black"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
                     android:shadowColor="#E68900"
                     android:shadowDx="8"
                     android:shadowDy="20"
@@ -164,7 +164,7 @@
                 android:background="@drawable/transparent_button"
                 android:text="O"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="50sp"
                 android:shadowColor="#E68900"
                 android:shadowDx="8"
                 android:shadowDy="20"
