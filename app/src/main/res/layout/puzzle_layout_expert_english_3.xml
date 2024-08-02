@@ -22,8 +22,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/logo"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/logo" />
 
         <ImageView
             android:id="@+id/levelStar1"
@@ -33,8 +33,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/star"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star" />
 
         <ImageView
             android:id="@+id/levelStar2"
@@ -44,8 +44,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/star"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star" />
 
         <ImageView
             android:id="@+id/levelStar3"
@@ -55,8 +55,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/star"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/star" />
     </LinearLayout>
 
     <!-- Empty boxes section -->
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="0.05"
         android:orientation="horizontal">
 
@@ -130,42 +130,100 @@
         android:layout_gravity="center"
         android:layout_weight="0.01"
         android:background="@drawable/hexagongiant">
+
         <!-- LinearLayout for the puzzle buttons -->
+
+        <!-- Result indicator -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_letter_top1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="-10dp"
                     android:layout_marginRight="30dp"
                     android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
                     android:text="M"
                     android:textColor="@android:color/black"
                     android:textSize="60sp" />
+
 
                 <Button
                     android:id="@+id/btn_letter_top2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="-10dp"
                     android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
                     android:text="E"
                     android:textColor="@android:color/black"
                     android:textSize="60sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_letter_left1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="90dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
+                    android:text="K"
+                    android:textColor="@android:color/black"
+                    android:textSize="60sp" />
+
+
+                <Button
+                    android:id="@+id/btn_letter_right1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
+                    android:text="A"
+                    android:textColor="@android:color/black"
+                    android:textSize="60sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -177,46 +235,20 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_letter_left1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="110dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="K"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
-
-                <Button
-                    android:id="@+id/btn_letter_right1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/transparent_button"
-                    android:text="A"
-                    android:textColor="@android:color/black"
-                    android:textSize="60sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-                <Button
                     android:id="@+id/btn_letter_left2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="-0dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
                     android:text="R"
                     android:textColor="@android:color/black"
                     android:textSize="60sp" />
+
 
                 <Button
                     android:id="@+id/btn_letter_right2"
@@ -225,9 +257,14 @@
                     android:layout_marginLeft="70dp"
                     android:layout_marginBottom="30dp"
                     android:background="@drawable/transparent_button"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"
                     android:text="T"
                     android:textColor="@android:color/black"
                     android:textSize="60sp" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -256,6 +293,7 @@
     </FrameLayout>
 
     <!-- Bottom buttons -->
+
     <Button
         android:id="@+id/btn_home"
         android:layout_width="wrap_content"
@@ -266,4 +304,5 @@
         android:backgroundTint="#FFC000"
         android:textColor="@android:color/white"
         android:textSize="40sp"/>
+
 </LinearLayout>
