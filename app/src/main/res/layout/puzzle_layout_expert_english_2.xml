@@ -302,7 +302,7 @@
         android:layout_gravity="center_horizontal"
         android:text="Back"
         android:backgroundTint="#FFC000"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="40sp"/>
 
 </LinearLayout>
