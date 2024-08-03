@@ -127,7 +127,11 @@
                 android:background="@drawable/transparent_button"
                 android:text="E"
                 android:textColor="@android:color/black"
-                android:textSize="40sp"/>
+                android:textSize="40sp"
+                android:shadowColor="#E68900"
+                android:shadowDx="8"
+                android:shadowDy="20"
+                android:shadowRadius="3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,7 +149,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="T"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp"/>
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
 
                 <Button
                     android:id="@+id/btn_letter_right1"
@@ -155,7 +163,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="W"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp"/>
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
             </LinearLayout>
 
             <LinearLayout
@@ -175,7 +187,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="A"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp"/>
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
 
                 <Button
                     android:id="@+id/btn_letter_right2"
@@ -185,7 +201,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="H"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp"/>
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -234,6 +254,6 @@
         android:layout_gravity="center_horizontal"
         android:text="Back"
         android:backgroundTint="#FFC000"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="40sp"/>
 </LinearLayout>
