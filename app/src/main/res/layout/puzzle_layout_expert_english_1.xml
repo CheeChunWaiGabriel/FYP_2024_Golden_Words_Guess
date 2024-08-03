@@ -290,7 +290,20 @@
             android:backgroundTint="@color/red"
             android:textColor="@android:color/white"
             android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/undo"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"/>
     </FrameLayout>
+
 
     <!-- Bottom buttons -->
 
