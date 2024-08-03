@@ -17,9 +17,9 @@
         <ImageView
             android:id="@+id/logoImg"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:paddingBottom="20dp"
@@ -129,7 +129,11 @@
                 android:background="@drawable/transparent_button"
                 android:text="R"
                 android:textColor="@android:color/black"
-                android:textSize="40sp" />
+                android:textSize="40sp"
+                android:shadowColor="#E68900"
+                android:shadowDx="8"
+                android:shadowDy="20"
+                android:shadowRadius="3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -147,7 +151,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="U"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
 
                 <Button
                     android:id="@+id/btn_letter_right1"
@@ -157,7 +165,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="K"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
             </LinearLayout>
 
             <LinearLayout
@@ -177,7 +189,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="B"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
 
                 <Button
                     android:id="@+id/btn_letter_right2"
@@ -187,7 +203,11 @@
                     android:background="@drawable/transparent_button"
                     android:text="O"
                     android:textColor="@android:color/black"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"
+                    android:shadowColor="#E68900"
+                    android:shadowDx="8"
+                    android:shadowDy="20"
+                    android:shadowRadius="3"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -207,9 +227,22 @@
             android:layout_height="50dp"
             android:layout_gravity="bottom|center_horizontal"
             android:visibility="gone"
-            android:layout_marginBottom="100dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="60dp"
             android:background="@drawable/tryagain"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"/>
+
+        <!-- Undo button -->
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/undo"
+            android:visibility="gone"
             android:textColor="@android:color/white"
             android:textSize="40sp"/>
     </FrameLayout>
@@ -223,6 +256,6 @@
         android:layout_gravity="center_horizontal"
         android:text="Back"
         android:backgroundTint="#FFC000"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="40sp"/>
 </LinearLayout>
