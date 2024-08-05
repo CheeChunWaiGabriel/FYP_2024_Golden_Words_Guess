@@ -25,6 +25,8 @@ public class Puzzlecode_Easy_English_2 extends AppCompatActivity {
     private Button btnTryAgain;
     private Button btnHome;
     private Button btnUndo;
+    private Button btnNext;
+    private Button btnBack;
     private ImageView resultIndicator;
     private MediaPlayer buttonClick;
     private MediaPlayer correct;
@@ -63,6 +65,8 @@ public class Puzzlecode_Easy_English_2 extends AppCompatActivity {
         btnTryAgain = findViewById(R.id.btn_try_again);
         btnHome = findViewById(R.id.btn_home);
         btnUndo = findViewById(R.id.btn_undo);
+        btnNext = findViewById(R.id.btn_Next);
+        btnBack = findViewById(R.id.btn_Back);
         resultIndicator = findViewById(R.id.result_indicator);
         buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
         congratulations = MediaPlayer.create(this, R.raw.clapping);
@@ -136,6 +140,8 @@ public class Puzzlecode_Easy_English_2 extends AppCompatActivity {
             if (index == boxes.length - 1) {
                 congratulations.start();
                 showResultIndicator(R.drawable.correct, resultIndicator);
+                btnNext.setVisibility(View.VISIBLE);
+                btnBack.setVisibility(View.VISIBLE);
             }
         } else {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
@@ -169,11 +175,18 @@ public class Puzzlecode_Easy_English_2 extends AppCompatActivity {
             }
         });
 
-        btnUndo.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                undoLastMove();
-                undo.start();
+                startActivity(new Intent(Puzzlecode_Easy_English_2.this, Puzzlecode_Easy_English_1.class));
+                buttonClick.start();
+            }
+        });
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Puzzlecode_Easy_English_2.this, Puzzlecode_Easy_English_3.class));
+                buttonClick.start();
             }
         });
     }

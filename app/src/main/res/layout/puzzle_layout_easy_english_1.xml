@@ -143,13 +143,14 @@
                     android:layout_height="100dp"
                     android:layout_marginLeft="70dp"
                     android:background="@drawable/transparent_button"
-                    android:text="L"
-                    android:textColor="@android:color/black"
-                    android:textSize="50sp"
                     android:shadowColor="#E68900"
                     android:shadowDx="8"
                     android:shadowDy="20"
-                    android:shadowRadius="3" />
+                    android:shadowRadius="3"
+                    android:text="L"
+                    android:textColor="@android:color/black"
+                    android:textSize="50sp" />
+
             </LinearLayout>
 
             <!-- Button at the bottom -->
@@ -172,8 +173,8 @@
         <!-- Result indicator -->
         <ImageView
             android:id="@+id/result_indicator"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:visibility="gone"
             android:scaleType="centerInside" />
@@ -186,10 +187,9 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginRight="60dp"
             android:layout_marginBottom="80dp"
-            android:visibility="gone"
             android:background="@drawable/tryagain"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+            android:visibility="gone"
+            />
 
         <!-- Undo button -->
         <Button
@@ -201,8 +201,17 @@
             android:layout_marginBottom="80dp"
             android:background="@drawable/undo"
             android:visibility="gone"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+            />
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/arrow"
+            android:visibility="gone"
+            />
     </FrameLayout>
 
 
