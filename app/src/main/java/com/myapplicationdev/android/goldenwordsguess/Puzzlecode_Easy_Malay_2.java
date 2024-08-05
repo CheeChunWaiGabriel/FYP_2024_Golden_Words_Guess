@@ -1,9 +1,13 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,6 +29,7 @@ public class Puzzlecode_Easy_Malay_2 extends AppCompatActivity {
     private Button btnTryAgain;
     private Button btnHome;
     private Button btnUndo;
+    private Button btnNext;
     private ImageView resultIndicator;
     private MediaPlayer buttonClick;
     private MediaPlayer correct;
@@ -63,6 +68,7 @@ public class Puzzlecode_Easy_Malay_2 extends AppCompatActivity {
         btnTryAgain = findViewById(R.id.btn_try_again);
         btnHome = findViewById(R.id.btn_home);
         btnUndo = findViewById(R.id.btn_undo);
+        btnNext = findViewById(R.id.btn_Next);
         resultIndicator = findViewById(R.id.result_indicator);
         buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
         congratulations = MediaPlayer.create(this, R.raw.clapping);
@@ -99,11 +105,30 @@ public class Puzzlecode_Easy_Malay_2 extends AppCompatActivity {
         // Clear shadow layer
         button.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
 
+        // Disable the button to prevent further selection
         button.setEnabled(false);
+
+        // Trigger vibration when the button is pressed
+        vibrate();
 
         // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
+    }
+    private void vibrate() {
+        // Get the Vibrator instance
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+        // Check if the device has a vibrator
+        if (vibrator != null && vibrator.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                // For API 26 and above
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                // For devices below API 26
+                vibrator.vibrate(100); // Vibrate for 100 milliseconds
+            }
+        }
     }
 
     private void animateButtonPress(Button button) {
@@ -136,6 +161,7 @@ public class Puzzlecode_Easy_Malay_2 extends AppCompatActivity {
             if (index == boxes.length - 1) {
                 congratulations.start();
                 showResultIndicator(R.drawable.correct, resultIndicator);
+                btnNext.setVisibility(View.VISIBLE);
             }
         } else {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
@@ -174,6 +200,14 @@ public class Puzzlecode_Easy_Malay_2 extends AppCompatActivity {
             public void onClick(View view) {
                 undoLastMove();
                 undo.start();
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Puzzlecode_Easy_Malay_2.this, Puzzlecode_Easy_Malay_3.class));
+                buttonClick.start();
             }
         });
     }
