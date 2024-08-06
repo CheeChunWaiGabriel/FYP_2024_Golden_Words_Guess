@@ -370,7 +370,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageViewRose"
+                    android:id="@+id/imageViewRose2"
                     android:layout_width="5dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
