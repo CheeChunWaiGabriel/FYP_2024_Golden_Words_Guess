@@ -24,7 +24,7 @@ public class Puzzlecode_Expert_Malay_1 extends AppCompatActivity {
     private TextView[] boxes;
     private Button[] letterButtons;
     private int currentBoxIndex = 0;
-    private final String correctWord = "FRIEND";
+    private final String correctWord = "BELIAU";
 
     private Button btnTryAgain;
     private Button btnHome;
