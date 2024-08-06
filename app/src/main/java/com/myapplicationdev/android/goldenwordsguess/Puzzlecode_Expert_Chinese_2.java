@@ -171,6 +171,7 @@ public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
             if (index == boxes.length - 1) {
                 congratulations.start();
                 showResultIndicator(R.drawable.correct, resultIndicator);
+                btnNext.setVisibility(View.VISIBLE);
             }
         } else {
             boxes[index].setBackgroundColor(ContextCompat.getColor(this, R.color.wrong_letter_color));
@@ -209,6 +210,13 @@ public class Puzzlecode_Expert_Chinese_2 extends AppCompatActivity {
             public void onClick(View view) {
                 undoLastMove();
                 undo.start();
+            }
+        });
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Puzzlecode_Expert_Chinese_2.this, Puzzlecode_Expert_Chinese_3.class));
+                buttonClick.start();
             }
         });
     }

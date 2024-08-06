@@ -1,9 +1,13 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,11 +24,12 @@ public class Puzzlecode_Expert_Malay_3 extends AppCompatActivity {
     private TextView[] boxes;
     private Button[] letterButtons;
     private int currentBoxIndex = 0;
-    private final String correctWord = "SAMPUL";
+    private final String correctWord = "FRIEND";
 
     private Button btnTryAgain;
     private Button btnHome;
     private Button btnUndo;
+    private Button btnNext;
     private ImageView resultIndicator;
     private MediaPlayer buttonClick;
     private MediaPlayer correct;
@@ -70,6 +75,7 @@ public class Puzzlecode_Expert_Malay_3 extends AppCompatActivity {
         btnTryAgain = findViewById(R.id.btn_try_again);
         btnHome = findViewById(R.id.btn_home);
         btnUndo = findViewById(R.id.btn_undo);
+        btnNext = findViewById(R.id.btn_Next);
         resultIndicator = findViewById(R.id.result_indicator);
         buttonClick = MediaPlayer.create(this, R.raw.navbuttonpressed);
         congratulations = MediaPlayer.create(this, R.raw.clapping);
@@ -77,6 +83,7 @@ public class Puzzlecode_Expert_Malay_3 extends AppCompatActivity {
         wrong = MediaPlayer.create(this, R.raw.wrong);
         retry = MediaPlayer.create(this, R.raw.retry);
         undo = MediaPlayer.create(this, R.raw.undo);
+
 
     }
 
@@ -109,9 +116,28 @@ public class Puzzlecode_Expert_Malay_3 extends AppCompatActivity {
 
         button.setEnabled(false);
 
+        // Trigger vibration when the button is pressed
+        vibrate();
+
         // Verify the letter and proceed
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
+    }
+
+    private void vibrate() {
+        // Get the Vibrator instance
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+        // Check if the device has a vibrator
+        if (vibrator != null && vibrator.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                // For API 26 and above
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                // For devices below API 26
+                vibrator.vibrate(100); // Vibrate for 100 milliseconds
+            }
+        }
     }
 
 
