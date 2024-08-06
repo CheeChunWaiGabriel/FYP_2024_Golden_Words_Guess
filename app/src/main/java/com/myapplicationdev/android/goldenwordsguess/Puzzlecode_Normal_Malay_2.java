@@ -1,9 +1,13 @@
 package com.myapplicationdev.android.goldenwordsguess;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -99,8 +103,22 @@ public class Puzzlecode_Normal_Malay_2 extends AppCompatActivity {
 
         button.setEnabled(false);
 
+        vibrate();
+
         verifyLetter(button.getText().toString(), currentBoxIndex);
         currentBoxIndex++;
+    }
+
+    private void vibrate() {
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+        if (vibrator != null && vibrator.hasVibrator()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(100);
+            }
+        }
     }
 
     private void animateButtonPress(Button button) {
