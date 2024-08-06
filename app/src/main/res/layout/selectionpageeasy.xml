@@ -200,10 +200,10 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="40dp"
                     android:layout_weight="1"
+                    android:maxLines="1"
                     android:text="@string/chinese1"
                     android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:maxLines="1"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
