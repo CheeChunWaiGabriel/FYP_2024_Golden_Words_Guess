@@ -468,7 +468,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:text="@string/Malay3"
+                    android:text="@string/Malay1"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     android:maxLines="1"/>
