@@ -24,7 +24,7 @@ public class Puzzlecode_Expert_English_2 extends AppCompatActivity {
     private TextView[] boxes;
     private Button[] letterButtons;
     private int currentBoxIndex = 0;
-    private final String correctWord = "FRIEND";
+    private final String correctWord = "FOREST";
 
     private Button btnTryAgain;
     private Button btnHome;

@@ -24,7 +24,7 @@ public class Puzzlecode_Expert_Chinese_1 extends AppCompatActivity {
     private TextView[] boxes;
     private Button[] letterButtons;
     private int currentBoxIndex = 0;
-    private final String correctWord = "FRIEND";
+    private final String correctWord = "有志者事竟成";
 
     private Button btnTryAgain;
     private Button btnHome;
