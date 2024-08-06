@@ -376,7 +376,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/sgiant1" />
+                    android:src="@drawable/hexagon1" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -385,7 +385,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/sgiant2" />
+                    android:src="@drawable/hexagon2" />
 
             </LinearLayout>
 
@@ -470,7 +470,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/sgiant3" />
+                    android:src="@drawable/hexagon3" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
