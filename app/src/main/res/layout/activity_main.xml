@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/htpLogo"
         android:layout_width="match_parent"
-        android:layout_height="293dp"
+        android:layout_height="280dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/golden_words_guess_logo_2" />
 
