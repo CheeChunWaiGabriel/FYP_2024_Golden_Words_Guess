@@ -91,7 +91,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant1" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -100,7 +100,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant2" />
 
             </LinearLayout>
 
@@ -186,7 +186,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant3" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -195,7 +195,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant1" />
 
             </LinearLayout>
 
@@ -282,7 +282,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant2" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -291,7 +291,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant3" />
 
             </LinearLayout>
 
@@ -376,7 +376,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant1" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -385,7 +385,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant2" />
 
             </LinearLayout>
 
@@ -470,7 +470,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    android:src="@drawable/sgiant3" />
 
                 <ImageView
                     android:id="@+id/imageViewRose"
@@ -479,7 +479,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
+                    />
 
             </LinearLayout>
 
@@ -509,10 +509,10 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="65dp"
                     android:layout_weight="1"
-                    android:text="@string/Tamil1"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    android:maxLines="1"/>
+                    android:maxLines="1"
+                    android:background="@drawable/transparent_button"/>/>
             </LinearLayout>
 
             <LinearLayout
@@ -545,109 +545,15 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/buttonblue2"
-                    android:text="@string/start"
-                    android:textColor="@android:color/black"
                     android:textSize="25sp"
-                    app:backgroundTint="@null" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewRose"
-                    android:layout_width="5dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
-
-                <ImageView
-                    android:id="@+id/imageViewRose"
-                    android:layout_width="5dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/redcircle2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvLevel11Expert"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginRight="65dp"
-                    android:layout_weight="1"
-                    android:text="@string/Tamil2"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:maxLines="1"/>
-
-                <TextView
-                    android:id="@+id/tvLevel12Expert"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="65dp"
-                    android:layout_weight="1"
-                    android:text="@string/Tamil3"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:maxLines="1"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnLevel11Expert"
-                    android:layout_width="0dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonblue2"
-                    android:text="@string/start"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp"
-                    app:backgroundTint="@null" />
-
-                <Button
-                    android:id="@+id/btnLevel12Expert"
-                    android:layout_width="0dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonblue2"
-                    android:text="@string/start"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp"
+                    android:background="@drawable/transparent_button"
                     app:backgroundTint="@null" />
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+
+        </ScrollView>
+
+
 
 
     <LinearLayout
