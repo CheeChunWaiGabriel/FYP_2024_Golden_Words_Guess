@@ -271,8 +271,8 @@
         <!-- Result indicator -->
         <ImageView
             android:id="@+id/result_indicator"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
             android:visibility="gone"
             android:scaleType="centerInside" />
@@ -282,26 +282,34 @@
             android:id="@+id/btn_try_again"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="250dp"
-            android:layout_weight="0.01"
-            android:visibility="gone"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/tryagain"
-            android:backgroundTint="@color/red"
-            android:textColor="@android:color/white"
-            android:textSize="40sp" />
+            android:visibility="gone"
+            />
 
+        <!-- Undo button -->
         <Button
             android:id="@+id/btn_undo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginLeft="70dp"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/undo"
             android:visibility="gone"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"/>
+            />
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/arrow"
+            android:visibility="gone"
+            />
     </FrameLayout>
 
 
