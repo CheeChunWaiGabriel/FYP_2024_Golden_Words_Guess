@@ -244,6 +244,17 @@
             android:visibility="gone"
             android:textColor="@android:color/white"
             android:textSize="40sp"/>
+
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/arrow"
+            android:visibility="gone"
+            />
     </FrameLayout>
 
     <!-- Bottom buttons -->
