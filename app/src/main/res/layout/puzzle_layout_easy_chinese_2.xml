@@ -21,8 +21,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
+            android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/logo" />
 
         <ImageView
@@ -30,9 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
+            android:layout_marginBottom="5dp"
             app:srcCompat="@drawable/star" />
     </LinearLayout>
 
